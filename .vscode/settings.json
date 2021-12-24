@@ -1,0 +1,163 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    "dist": false
+  },
+  "todo-tree.regex.regex": "(?:(?://|#|<!--|;|/\\*\\*?|\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "#FFF",
+    "background": "#F1C40F",
+    "icon": "check",
+    "rulerColour": "#F1C40F",
+    "type": "tag",
+    "iconColour": "#F1C40F"
+  },
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "FIX",
+    "TAG",
+    "NOTE",
+    "todo",
+    "fixme",
+    "fix",
+    "tag",
+    "note"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "background": "#FF8C00",
+      "rulerColour": "#FF8C00",
+      "iconColour": "#FF8C00"
+    },
+    "FIXME": {
+      "background": "red",
+      "icon": "beaker",
+      "rulerColour": "red",
+      "iconColour": "red"
+    },
+    "FIX": {
+      "background": "blue",
+      "icon": "tag",
+      "rulerColour": "blue",
+      "iconColour": "blue",
+      "rulerLane": "full"
+    },
+    "NOTE": {
+      "background": "#f90",
+      "icon": "note",
+      "rulerColour": "#f90",
+      "iconColour ": "#f90"
+    },
+    "todo": {
+      "background": "#FF8C00",
+      "rulerColour": "#FF8C00",
+      "iconColour": "#FF8C00"
+    },
+    "fixme": {
+      "background": "red",
+      "icon": "beaker",
+      "rulerColour": "red",
+      "iconColour": "red"
+    },
+    "fix": {
+      "background": "blue",
+      "icon": "tag",
+      "rulerColour": "blue",
+      "iconColour": "blue",
+      "rulerLane": "full"
+    },
+    "note": {
+      "background": "#f90",
+      "icon": "note",
+      "rulerColour": "#f90",
+      "iconColour ": "#f90"
+    }
+  },
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "^",
+      "color": "#EADB67",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "&",
+      "color": "#FC427B",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#1E90FF",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "~",
+      "color": "#D980FA",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#61CF45",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "emmet.triggerExpansionOnTab": true,
+  "editor.codeActionsOnSave": {
+    // eslint 自动修复
+    "source.fixAll.eslint": true
+  },
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "git.ignoreLimitWarning": true
+}
