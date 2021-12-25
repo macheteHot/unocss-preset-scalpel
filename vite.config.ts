@@ -23,8 +23,8 @@ export default defineConfig(() => ({
     outDir: 'dist',
     lib: {
       entry: resolvePath('./src/main.ts'),
-      formats: ['es'],
-      fileName: () => 'index.js',
+      formats: ['es', 'cjs'],
+      fileName: (type: string) => `index.${type === 'cjs' ? 'cjs' : 'mjs'}`,
     },
     rollupOptions: {
       external: ['unocss'],
