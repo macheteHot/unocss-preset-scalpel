@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import * as assert from 'uvu/assert'
 import { suite } from 'uvu'
 import { createGenerator } from 'unocss'
@@ -94,18 +93,10 @@ for (let i = testConfigs.length - 1; i >= 0; i--) {
       .map((mq) => baseList.map((base) => `${mq}@${base}`))
       .flat(Infinity)
 
-    const mediaQueryWithPseudoList = mediaQueryKeys
-      .map((mq) =>
-        PSEUDO_LIST.map((psedu) =>
-          baseList.map((base) => `${mq}@${psedu}:${base}`)
-        )
-      )
-      .flat(Infinity)
-
     // ------------------------- generate css -------------------------
     const { css } = await generator.generate(
       `<div class="${baseList
-        .concat(pseduList, mediaQueryList, mediaQueryWithPseudoList)
+        .concat(pseduList, mediaQueryList)
         .join(' ')}"></div>`
     )
 
