@@ -1,4 +1,4 @@
-import { IScleplOptions } from 'src/types'
+import { IScleplOptions } from '../types'
 
 const defaultConfig: Required<IScleplOptions> = {
   unit: 'px',

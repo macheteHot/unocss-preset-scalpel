@@ -328,3 +328,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains,visualstudiocode,node,macos,windows,linux
+
+# build type files 
+temp

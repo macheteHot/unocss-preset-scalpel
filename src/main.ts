@@ -1,10 +1,10 @@
 import { Preset } from 'unocss'
 import { PSEUDO_STR } from './constant'
 import { IScleplOptions } from './types'
+import { getConfig, setConfig } from './config'
 
 import alignItems from './rules/alignItems'
 import border from './rules/border'
-import { getConfig, setConfig } from './config'
 import borderRadius from './rules/borderRadius'
 import borderStyle from './rules/borderStyle'
 import boxSizing from './rules/boxSizing'
@@ -44,7 +44,9 @@ import visibility from './rules/visibility'
 import width from './rules/width'
 import wordBreak from './rules/wordBreak'
 import zIndex from './rules/zIndex'
-
+/**
+ * @public
+ */
 export function presetScalpel(options?: IScleplOptions): Preset {
   setConfig(options ?? {})
 

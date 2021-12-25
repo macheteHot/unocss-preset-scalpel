@@ -1,18 +1,4 @@
 export const toRegexStr = (_: string[]) => _.join('|')
-export const COLORS = 'colors' // 选填
-export const DIR_PATH = 'dirPath' // 必填
-export const GENERATE = 'generate' // 必填 生成地址
-export const UNIT = 'unit' // 选填 单位
-export const IMPORTANT = 'important' // 选填 单位
-export const GLOB_REG = 'globReg'
-export const V_TO_ANY = 'vToAny' // px转rem配置
-export const BEFORE_STR = 'beforeStr' // 文件前缀头 默认 /* stylelint-disable */
-export const AFTER_STR = 'afterStr' // 文件后添加字符串
-// 以下是项目配置 不从配置文件读
-export const EXT_NAME = 'extNames'
-export const MODIFY_RULES = 'modifyRules'
-export const MEDIA_QUERIES = 'mediaQueries'
-// 以下是枚举
 
 export const DISPLAY_ENUM = [
   'unset',
