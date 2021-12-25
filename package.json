@@ -33,7 +33,7 @@
     "prepare": "husky install",
     "dev": "vite",
     "build": "tsc && vite build && api-extractor run",
-    "release": "npx bumpp package.json --commit \"release: v\" --push --tag"
+    "release": "npx bumpp package.json --commit --push --tag"
 
   },
   "devDependencies": {
