@@ -5,32 +5,33 @@ import { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 import { JUSTIFY_CONTENT_ENUM_STR, ALIGN_ITEMS_ENUM_STR } from '../constant'
 
-export default  ()=> [
+export default () =>
   [
-    new RegExp(
-      `^flex-(?<justify>${JUSTIFY_CONTENT_ENUM_STR})-(?<align>${ALIGN_ITEMS_ENUM_STR})$`
-    ),
-    ({ groups }) => {
-      const { justify, align } = groups as { justify: string; align: string }
+    [
+      new RegExp(
+        `^flex-(?<justify>${JUSTIFY_CONTENT_ENUM_STR})-(?<align>${ALIGN_ITEMS_ENUM_STR})$`
+      ),
+      ({ groups }) => {
+        const { justify, align } = groups as { justify: string; align: string }
 
-      const newJustify = () => {
-        if (justify === 'between') {
-          return 'space-between'
+        const newJustify = () => {
+          if (justify === 'between') {
+            return 'space-between'
+          }
+          if (justify === 'around') {
+            return 'space-around'
+          }
+          if (justify === 'evenly') {
+            return 'space-evenly'
+          }
+          return justify
         }
-        if (justify === 'around') {
-          return 'space-around'
-        }
-        if (justify === 'evenly') {
-          return 'space-evenly'
-        }
-        return justify
-      }
-      return ConvertToCssObject([
-        'display: flex',
-        `justify-content: ${newJustify()}`,
-        `align-items: ${align}`,
-      ])
-    },
-    generatorLayer(200),
-  ],
-] as Rule[]
+        return ConvertToCssObject([
+          'display: flex',
+          `justify-content: ${newJustify()}`,
+          `align-items: ${align}`,
+        ])
+      },
+      generatorLayer(200),
+    ],
+  ] as Rule[]

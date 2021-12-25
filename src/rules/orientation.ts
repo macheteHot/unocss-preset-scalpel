@@ -9,28 +9,29 @@ import {
   DIRECTION_MAP,
 } from '../constant'
 
-export default  ()=> [
+export default () =>
   [
-    new RegExp(
-      `^(?<direction>[trbl]|top|right|bottom|left)-(?<isMinus>m-)?(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
-    ),
-    ({ groups }) => {
-      const { direction, isMinus, num, unit } = groups as {
-        direction: string
-        isMinus?: string
-        num: string
-        unit?: string
-      }
-      const newNum = isMinus ? `-${num}` : num
+    [
+      new RegExp(
+        `^(?<direction>[trbl]|top|right|bottom|left)-(?<isMinus>m-)?(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
+      ),
+      ({ groups }) => {
+        const { direction, isMinus, num, unit } = groups as {
+          direction: string
+          isMinus?: string
+          num: string
+          unit?: string
+        }
+        const newNum = isMinus ? `-${num}` : num
 
-      // is only t r b l
-      const newDirection =
-        direction.length === 1 ? DIRECTION_MAP.get(direction)![0]! : direction
+        // is only t r b l
+        const newDirection =
+          direction.length === 1 ? DIRECTION_MAP.get(direction)![0]! : direction
 
-      return ConvertToCssObject([
-        `${newDirection}: ${getUnitAndNum(unit, newNum)}`,
-      ])
-    },
-    generatorLayer(310),
-  ],
-] as Rule[]
+        return ConvertToCssObject([
+          `${newDirection}: ${getUnitAndNum(unit, newNum)}`,
+        ])
+      },
+      generatorLayer(310),
+    ],
+  ] as Rule[]
