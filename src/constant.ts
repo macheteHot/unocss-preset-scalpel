@@ -111,6 +111,7 @@ export const UNIT_ENUM = [
   'vmin',
   'vmax',
   'p',
+  '%',
   'v',
 ] as const
 
