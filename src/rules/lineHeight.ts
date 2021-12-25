@@ -5,7 +5,7 @@ import { ConvertToCssObject, generatorLayer, getUnitAndNum } from '../utils'
  */
 import { UNIT_ENUM_STR, NONNEGATIVE_NUMBER_REGEX_STR } from '../constant'
 
-export default [
+export default  ()=> [
   [
     new RegExp(
       `^(lh|line-height)-(?<value>((?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?)|normal|unset|inherit|initial)$`

@@ -3,7 +3,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
 /**
  * order 360
  */
-export default [
+export default  ()=> [
   [
     /^(font-weight|fw)-(?<value>[1-9]00|bold|bolder|inherit|initial|lighter|normal|unset)$/,
     ({ groups }) => {

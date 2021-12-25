@@ -15,13 +15,14 @@ const list = [
   'unset',
 ]
 
-export default [
+export default () =>
   [
-    new RegExp(`^visibility-(?<value>${toRegexStr(list)})$`),
-    ({ groups }) => {
-      const { value } = groups as { value: string }
-      return ConvertToCssObject([`visibility-${value}: ${value}`])
-    },
-    generatorLayer(590),
-  ],
-] as Rule[]
+    [
+      new RegExp(`^visibility-(?<value>${toRegexStr(list)})$`),
+      ({ groups }) => {
+        const { value } = groups as { value: string }
+        return ConvertToCssObject([`visibility-${value}: ${value}`])
+      },
+      generatorLayer(590),
+    ],
+  ] as Rule[]

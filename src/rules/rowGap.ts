@@ -9,7 +9,7 @@ import {
   UNIT_ENUM_STR,
 } from '../constant'
 
-export default [
+export default  ()=> [
   [
     new RegExp(
       `^r(ow)?-gap-(((?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?)|(?<value>${GAP_ENUM_STR}))$`

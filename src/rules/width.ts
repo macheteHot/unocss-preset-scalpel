@@ -5,15 +5,16 @@ import { ConvertToCssObject, generatorLayer, getUnitAndNum } from '../utils'
  */
 import { UNIT_ENUM_STR, NONNEGATIVE_NUMBER_REGEX_STR } from '../constant'
 
-export default [
+export default () =>
   [
-    new RegExp(
-      `^(w|width)-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
-    ),
-    ({ groups }) => {
-      const { num, unit } = groups as { num: string; unit?: string }
-      return ConvertToCssObject([`width: ${getUnitAndNum(unit, num)}`])
-    },
-    generatorLayer(10),
-  ],
-] as Rule[]
+    [
+      new RegExp(
+        `^(w|width)-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
+      ),
+      ({ groups }) => {
+        const { num, unit } = groups as { num: string; unit?: string }
+        return ConvertToCssObject([`width: ${getUnitAndNum(unit, num)}`])
+      },
+      generatorLayer(10),
+    ],
+  ] as Rule[]

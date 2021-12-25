@@ -5,7 +5,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 380 - 400
  */
 
-export default [
+export default  ()=> [
   [
     /^overflow(-(?<direction>[xy]))?-(?<value>hidden|auto|visible|scroll|inherit)$/,
     ({ groups }) => {

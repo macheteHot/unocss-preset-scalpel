@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 320
  */
 
-export default [
+export default  ()=> [
   [
     /^(text-align|text)-(?<value>start|end|left|right|center|justify|match-parent)$/,
     ({ groups }) => {

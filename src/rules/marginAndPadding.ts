@@ -14,7 +14,7 @@ import {
   NONNEGATIVE_NUMBER_REGEX_STR,
 } from '../constant'
 
-export default [
+export default  ()=> [
   [
     // margin for all direction
     new RegExp(

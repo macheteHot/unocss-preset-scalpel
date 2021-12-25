@@ -1,7 +1,7 @@
 import { Preset } from 'unocss'
 import { PSEUDO_STR } from './constant'
 import { IScleplOptions } from './types'
-import { getConfig, setConfig } from './config'
+import { setConfig as setConfigToUtils } from './utils'
 
 import alignItems from './rules/alignItems'
 import border from './rules/border'
@@ -46,6 +46,52 @@ import width from './rules/width'
 import wordBreak from './rules/wordBreak'
 import zIndex from './rules/zIndex'
 
+const presetConfig: Required<IScleplOptions> = {
+  unit: 'px',
+  important: false,
+  colors: {
+    red: '#f00',
+    white: '#fff',
+    black: '#000',
+    blue: '#00f',
+    yellow: '#ff0',
+    transparent: 'transparent',
+  },
+  mediaQueries: {
+    sm: 'media (min-width: 640px)',
+    md: 'media (min-width: 768px)',
+    lg: 'media (min-width: 1024px)',
+    xl: 'media (min-width: 1280px)',
+  },
+  vToAny: {
+    unit: 'rem',
+    rootValue: 16,
+    unitPrecision: 5,
+    minPixelValue: 1,
+  },
+}
+
+function setConfig(config: Partial<IScleplOptions>): void {
+  const {
+    colors,
+    mediaQueries,
+    vToAny,
+    unit = 'px',
+    important = false,
+  } = config
+  Object.assign(presetConfig, { unit, important })
+  if (colors) {
+    Object.assign(presetConfig.colors, colors)
+  }
+  if (mediaQueries) {
+    Object.assign(presetConfig.mediaQueries, mediaQueries)
+  }
+  if (vToAny) {
+    Object.assign(presetConfig.vToAny, vToAny)
+  }
+  setConfigToUtils(presetConfig)
+}
+
 /**
  * @public
  */
@@ -58,15 +104,18 @@ export function presetScalpel(options?: IScleplOptions): Preset {
     variants: [
       // MEDIA Query
       (matcher) => {
-        const MEIDA_QUERY_STR = Object.keys(getConfig('mediaQueries')).join('|')
         const [, meidaQuery = ''] =
-          matcher.match(new RegExp(`^(${MEIDA_QUERY_STR})@`)) ?? []
+          matcher.match(
+            new RegExp(
+              `^(${Object.keys(presetConfig.mediaQueries).join('|')})@`
+            )
+          ) ?? []
         if (!meidaQuery) {
           return matcher
         }
         return {
           matcher: matcher.replace(/^.+?@(.*)$/, '$1'),
-          parent: [`@media ${getConfig('mediaQueries')[meidaQuery]}`, 999999],
+          parent: [`@${presetConfig.mediaQueries[meidaQuery]}`, 999999],
         }
       },
       // PSEUDO
@@ -83,48 +132,48 @@ export function presetScalpel(options?: IScleplOptions): Preset {
       },
     ],
     rules: [
-      alignItems,
-      border,
-      borderRadius,
-      borderStyle,
-      boxSizing,
-      circle,
-      color,
-      columnGap,
-      cursor,
-      display,
-      flexBasis,
-      flexDirection,
-      flexJustAli,
-      flexNum,
-      flexShrinkAndGrow,
-      flexWrap,
-      fontSize,
-      fontWeight,
-      gap,
-      height,
-      justifyContent,
-      letterSpacing,
-      lineHeight,
-      marginAndPadding,
-      minMaxHeightWidth,
-      objectFit,
-      opacity,
-      orientation,
-      overflow,
-      position,
-      rowGap,
-      square,
-      textAlign,
-      textAlignLast,
-      textDecoration,
-      textEllipsis,
-      userSelect,
-      verticalAlign,
-      visibility,
-      width,
-      wordBreak,
-      zIndex,
+      alignItems(),
+      border(),
+      borderRadius(),
+      borderStyle(),
+      boxSizing(),
+      circle(),
+      color(presetConfig),
+      columnGap(),
+      cursor(),
+      display(),
+      flexBasis(),
+      flexDirection(),
+      flexJustAli(),
+      flexNum(),
+      flexShrinkAndGrow(),
+      flexWrap(),
+      fontSize(),
+      fontWeight(),
+      gap(),
+      height(),
+      justifyContent(),
+      letterSpacing(),
+      lineHeight(),
+      marginAndPadding(),
+      minMaxHeightWidth(),
+      objectFit(),
+      opacity(),
+      orientation(),
+      overflow(),
+      position(),
+      rowGap(),
+      square(),
+      textAlign(),
+      textAlignLast(),
+      textDecoration(),
+      textEllipsis(),
+      userSelect(),
+      verticalAlign(),
+      visibility(),
+      width(),
+      wordBreak(),
+      zIndex(),
     ].flat(1),
   }
 }

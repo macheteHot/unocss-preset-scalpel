@@ -3,7 +3,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
 /**
  * order Infinity
  */
-export default [
+export default  ()=> [
   [
     /^opacity-(?<value>([1-9]?\d|100))$/,
     ({ groups }) => {

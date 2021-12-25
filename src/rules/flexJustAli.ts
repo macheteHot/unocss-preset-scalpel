@@ -5,7 +5,7 @@ import { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 import { JUSTIFY_CONTENT_ENUM_STR, ALIGN_ITEMS_ENUM_STR } from '../constant'
 
-export default [
+export default  ()=> [
   [
     new RegExp(
       `^flex-(?<justify>${JUSTIFY_CONTENT_ENUM_STR})-(?<align>${ALIGN_ITEMS_ENUM_STR})$`

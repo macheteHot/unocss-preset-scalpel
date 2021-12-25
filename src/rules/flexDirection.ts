@@ -5,7 +5,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 230
  */
 
-export default [
+export default  ()=> [
   [
     /^(flex-direction|flex)-(?<value>row|row-reverse|column|column-reverse)$/,
     ({ groups }) => {

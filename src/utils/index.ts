@@ -1,25 +1,12 @@
 import { CSSObject } from 'unocss'
-import { getConfig } from '../config'
-import { IDirection } from '../types'
+import Decimal from 'decimal.js'
+import { IDirection, IScleplOptions } from '../types'
 
-function accDiv(arg1: number, arg2: number): number {
-  let t1 = 0
-  let t2 = 0
-  try {
-    t1 = arg1.toString().split('.')[1]?.length ?? 0
-  } catch (e) {
-    console.error(e)
-  }
-  try {
-    t2 = arg2.toString().split('.')[1]?.length ?? 0
-  } catch (e) {
-    console.error(e)
-  }
-  const r1 = Number(arg1.toString().replace('.', ''))
-  const r2 = Number(arg2.toString().replace('.', ''))
-  return (r1 / r2) * 10 ** (t2 - t1)
+let presetConfig: Required<IScleplOptions>
+
+export function setConfig(config: Required<IScleplOptions>) {
+  presetConfig = config
 }
-
 export function isFunction(payload: unknown): boolean {
   return Object.prototype.toString.call(payload) === '[object Function]'
 }
@@ -59,18 +46,18 @@ export function generatorLayer(order: number) {
 
 function v2any(num: string) {
   const newNum = Number(num)
-  const { rootValue, unitPrecision, minPixelValue } = getConfig('vToAny')
+  const { rootValue, unitPrecision, minPixelValue } = presetConfig.vToAny
   if (newNum < minPixelValue!) {
-    return newNum
+    return num
   }
-  return Number(accDiv(newNum, rootValue).toFixed(unitPrecision))
+  return new Decimal(newNum).div(rootValue).toFixed(unitPrecision)
 }
 
 export function getUnitAndNum(
   unit: string | number | undefined,
   num: number | string | undefined
 ): string {
-  const defaultUnit = getConfig('unit')
+  const defaultUnit = presetConfig.unit
   let newUnit = unit
   let newNum = num
   if (Number(num) === 0) {
@@ -81,18 +68,17 @@ export function getUnitAndNum(
     newUnit = defaultUnit
   }
   if (newUnit === 'v') {
-    newUnit = getConfig('vToAny').unit
+    newUnit = presetConfig.vToAny.unit
     newNum = v2any(num as string)
   }
   return `${newNum}${newUnit}`
 }
 
 export function ConvertToCssObject(cssList: string[]): CSSObject {
-  const isImportant = getConfig('important')
   return Object.fromEntries(
     cssList.map((css) => {
       const [key, value] = css.split(':') as [string, string]
-      return [key, isImportant ? `${value} !important` : value]
+      return [key, presetConfig.important ? `${value} !important` : value]
     })
   )
 }
@@ -105,7 +91,7 @@ export function textToRgbText(str: string, opacity = 1) {
   // is hex text or word
   const hex = /^#?([a-fA-F0-9]{8}|[a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/.test(str)
     ? str.replace(/^#/, '')
-    : getConfig('colors')[str]!.replace(/^#/, '')
+    : presetConfig.colors[str]!.replace(/^#/, '')
   if (hex === 'transparent') {
     return 'transparent'
   }

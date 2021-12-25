@@ -3,7 +3,7 @@ import { ConvertToCssObject, generatorLayer, getUnitAndNum } from '../utils'
 
 import { UNIT_ENUM_STR, NONNEGATIVE_NUMBER_REGEX_STR } from '../constant'
 
-export default [
+export default  ()=> [
   // max height
   [
     new RegExp(

@@ -5,7 +5,7 @@
 import { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
-export default [
+export default  ()=> [
   [
     /^flex-(?<value>null|auto|none|(0|[1-9]\d*))$/,
     ({ groups }) => {

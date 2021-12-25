@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 300
  */
 
-export default [
+export default  ()=> [
   [
     /^position-(?<value>static|relative|sticky|unset|absolute|fixed|inherit|initial)$/,
     ({ groups }) => {

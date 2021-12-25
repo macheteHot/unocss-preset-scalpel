@@ -6,6 +6,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.4.0
   '@typescript-eslint/parser': ^5.4.0
   bumpp: ^7.1.1
+  decimal.js: ^10.3.1
   eslint: ^7.32.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-config-prettier: ^8.3.0
@@ -32,6 +33,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.8.0_da4c6df71e3dc18e6a1d96f4f9a2567d
   '@typescript-eslint/parser': 5.8.0_eslint@7.32.0+typescript@4.5.4
   bumpp: 7.1.1
+  decimal.js: 10.3.1
   eslint: 7.32.0
   eslint-config-airbnb-base: 15.0.0_a820dc868cc8cd66d8297be6779b9035
   eslint-config-prettier: 8.3.0_eslint@7.32.0
@@ -928,6 +930,10 @@ packages:
     dependencies:
       ms: 2.1.2
       supports-color: 9.2.1
+    dev: true
+
+  /decimal.js/10.3.1:
+    resolution: {integrity: sha1-2MOkRKnGd0umDKatcmHDqU/V54M=, tarball: decimal.js/download/decimal.js-10.3.1.tgz}
     dev: true
 
   /deep-is/0.1.4:

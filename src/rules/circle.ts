@@ -4,10 +4,11 @@
 import { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
-export default [
+export default () =>
   [
-    /^circle$/,
-    () => ConvertToCssObject(['border-radius: 50%']),
-    generatorLayer(540),
-  ],
-] as Rule[]
+    [
+      /^circle$/,
+      () => ConvertToCssObject(['border-radius: 50%']),
+      generatorLayer(540),
+    ],
+  ] as Rule[]

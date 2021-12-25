@@ -47,26 +47,27 @@ function handleBorder({ groups }: RegExpMatchArray) {
   return ConvertToCssObject(getCss(direction, getUnitAndNum(unit, num)))
 }
 
-export default [
+export default () =>
   [
-    new RegExp(
-      `^(border|border-width|border-w)-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
-    ),
-    handleBorder,
-    generatorLayer(getOrder()),
-  ],
-  [
-    new RegExp(
-      `^(border|border-width|border-w)-(?<direction>[xy])-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
-    ),
-    handleBorder,
-    generatorLayer(getOrder('x')),
-  ],
-  [
-    new RegExp(
-      `^(border|border-width|border-w)-(?<direction>[trbl])-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
-    ),
-    handleBorder,
-    generatorLayer(getOrder('t')),
-  ],
-] as Rule[]
+    [
+      new RegExp(
+        `^(border|border-width|border-w)-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
+      ),
+      handleBorder,
+      generatorLayer(getOrder()),
+    ],
+    [
+      new RegExp(
+        `^(border|border-width|border-w)-(?<direction>[xy])-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
+      ),
+      handleBorder,
+      generatorLayer(getOrder('x')),
+    ],
+    [
+      new RegExp(
+        `^(border|border-width|border-w)-(?<direction>[trbl])-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
+      ),
+      handleBorder,
+      generatorLayer(getOrder('t')),
+    ],
+  ] as Rule[]
