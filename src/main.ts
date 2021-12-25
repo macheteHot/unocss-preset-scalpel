@@ -16,6 +16,7 @@ import display from './rules/display'
 import flexBasis from './rules/flexBasis'
 import flexDirection from './rules/flexDirection'
 import flexJustAli from './rules/flexJustAli'
+import flexNum from './rules/flexNum'
 import flexShrinkAndGrow from './rules/flexShrinkAndGrow'
 import flexWrap from './rules/flexWrap'
 import fontSize from './rules/fontSize'
@@ -44,6 +45,7 @@ import visibility from './rules/visibility'
 import width from './rules/width'
 import wordBreak from './rules/wordBreak'
 import zIndex from './rules/zIndex'
+
 /**
  * @public
  */
@@ -94,6 +96,7 @@ export function presetScalpel(options?: IScleplOptions): Preset {
       flexBasis,
       flexDirection,
       flexJustAli,
+      flexNum,
       flexShrinkAndGrow,
       flexWrap,
       fontSize,
