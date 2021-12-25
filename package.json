@@ -32,7 +32,9 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
-    "build": "tsc && vite build && api-extractor run"
+    "build": "tsc && vite build && api-extractor run",
+    "release": "npx bumpp package.json --commit \"release: v\" --push --tag"
+
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.19.2",
