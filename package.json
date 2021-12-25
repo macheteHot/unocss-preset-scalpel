@@ -37,7 +37,8 @@
     "prepare": "husky install",
     "dev": "vite",
     "build": "tsc && vite build && api-extractor run",
-    "release": "npx bumpp package.json --commit --push --tag"
+    "release": "npx bumpp package.json --commit --push --tag",
+    "test": "tsc && vite build && uvu tests main.test.js"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.19.2",
@@ -62,6 +63,7 @@
     "prettier-eslint": "^13.0.0",
     "typescript": "^4.5.4",
     "unocss": "^0.18.0",
+    "uvu": "^0.5.2",
     "vite": "^2.7.6"
   },
   "lint-staged": {

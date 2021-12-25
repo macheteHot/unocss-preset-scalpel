@@ -12,6 +12,9 @@
     "node_modules": true,
     "dist": false
   },
+  "files.associations": {
+    "*.css.snap": "css"
+  },
   "todo-tree.regex.regex": "(?:(?://|#|<!--|;|/\\*\\*?|\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
   "todo-tree.highlights.defaultHighlight": {
     "foreground": "#FFF",
