@@ -1,4 +1,8 @@
 {
+  "[json][jsonc][css][less][scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,

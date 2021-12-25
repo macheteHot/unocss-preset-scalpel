@@ -22,19 +22,16 @@
     "node": ">=16.13.0"
   },
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
   "files": [
-    "dist",
-    "*.css"
+    "dist"
   ],
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
     "build": "tsc && vite build && api-extractor run",
     "release": "npx bumpp package.json --commit --push --tag"
-
   },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.19.2",
