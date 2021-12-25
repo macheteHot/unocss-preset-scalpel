@@ -7,23 +7,32 @@ on:
   pull_request:
 
 jobs:
-  test:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-        - name: Install pnpm
+
+      - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.24.1
+
       - name: Use Node.js v16
         uses: actions/setup-node@v2
         with:
           node-version: v16
           registry-url: https://registry.npmjs.org/
           cache: 'pnpm'
-         - name: Install Dependencies
-         run: pnpm install
-         - name: PNPM test
-       - run: pnpm run test
+
+      - run: npx conventional-github-releaser -p angular
+        continue-on-error: true
+        env:
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.PROJECT_GITHUB_TOKEN}}
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: PNPM test
+        run: pnpm run test
