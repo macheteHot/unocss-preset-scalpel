@@ -1,7 +1,6 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@antfu/ni': ^0.12.0
   '@microsoft/api-extractor': ^7.19.2
   '@types/node': ^17.0.4
   '@typescript-eslint/eslint-plugin': ^5.4.0
@@ -27,7 +26,6 @@ specifiers:
   vite: ^2.7.6
 
 devDependencies:
-  '@antfu/ni': 0.12.0
   '@microsoft/api-extractor': 7.19.2
   '@types/node': 17.0.4
   '@typescript-eslint/eslint-plugin': 5.8.0_da4c6df71e3dc18e6a1d96f4f9a2567d
@@ -53,11 +51,6 @@ devDependencies:
   vite: 2.7.6
 
 packages:
-
-  /@antfu/ni/0.12.0:
-    resolution: {integrity: sha512-f+uqWBuXoShLpLSaQKHeFUnoUdvMGx8xcXrtyfxK95RGx5guKJVo3kVb2JtLNWkzwYzQvtQ+q0hU9YwSDSTVSw==, tarball: '@antfu/ni/download/@antfu/ni-0.12.0.tgz'}
-    hasBin: true
-    dev: true
 
   /@antfu/utils/0.3.0:
     resolution: {integrity: sha1-YwbEO1Kog72Olz4+2N1kJIQYvMQ=, tarball: '@antfu/utils/download/@antfu/utils-0.3.0.tgz'}
