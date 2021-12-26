@@ -126,44 +126,43 @@ config object like this
 ```
 
 ## rule and use demo
-> demo all use default config
 
 + width and height
 
-    | Class | Properties |
-    | :--- |   :----   |
-    | w-0  | width:0; |
-    | w-20  | width:20px; |
-    | width-20  | width:20px; |
-    | w-0.25vh  | width:0.25vh |
-    | width-333.333p  | width:333.333%  |
-    | w-3.1415  | width:3.1415%  |
-    | width-100v  | width:6.25rem  |
-    | h-0  | height:0; |
-    | height-20  | height:20px; |
-    | h-20  | height:20px; |
-    | height-0.25vh  | height:0.25vh |
-    | h-333.333p  | height:333.333%  |
-    | height-3.1415  | height:3.1415%  |
-    | h-100v  | height:6.25rem  |
+  | Class | Properties |
+  | :--- |   :----   |
+  | w-0  | width:0; |
+  | w-20  | width:20px; |
+  | width-20  | width:20px; |
+  | w-0.25vh  | width:0.25vh |
+  | width-333.333p  | width:333.333%  |
+  | w-3.1415  | width:3.1415%  |
+  | width-100v  | width:6.25rem  |
+  | h-0  | height:0; |
+  | height-20  | height:20px; |
+  | h-20  | height:20px; |
+  | height-0.25vh  | height:0.25vh |
+  | h-333.333p  | height:333.333%  |
+  | height-3.1415  | height:3.1415%  |
+  | h-100v  | height:6.25rem  |
     
 + min max widht and height   
     >add min- or max- before width or height  
 
-    | Class | Properties |
-    | :--- |   :----   |
-    | min-w-0.25vh  | min-width:0.25vh |
-    | min-width-0.25vh  | min-width:0.25vh |
-    | max-h-0.25vh  | max-height:0.25vh |
-    | max-height-0.25vh  | max-height:0.25vh |
+  | Class | Properties |
+  | :--- |   :----   |
+  | min-w-0.25vh  | min-width:0.25vh |
+  | min-width-0.25vh  | min-width:0.25vh |
+  | max-h-0.25vh  | max-height:0.25vh |
+  | max-height-0.25vh  | max-height:0.25vh |
     
 + square
   > use square set same width and height 
 
-    | Class | Properties |
-    | :--- |   :----   |
-    | square-25  | width:25px;height:25px; |
-    | square-0.25vh  | width:0.25vh;height:0.25vh |
+  | Class | Properties |
+  | :--- |   :----   |
+  | square-25  | width:25px;height:25px; |
+  | square-0.25vh  | width:0.25vh;height:0.25vh |
 
  
 
@@ -179,7 +178,7 @@ config object like this
   | m-l-0.25rem  | margin-right:0.25rem; |
 
 + alignItems
-> set align-items
+  > set align-items
 
   | Class | Properties |
   | :--- |   :----   |
@@ -189,10 +188,10 @@ config object like this
   | align-items-flex-start | align-items:flex-start; |
 
 + border 
-> set border with direction   
-> use <code>border</code> or <code>border-w</code> or <code>border-width</code>    
+  > set border with direction   
+  > use <code>border</code> or <code>border-w</code> or <code>border-width</code>    
 
-> for visualization default has <code>border-style: solid</code> and <code>border-color: rgba(0,0,0,1)</code>
+  > for visualization default has <code>border-style: solid</code> and <code>border-color: rgba(0,0,0,1)</code>
 
   | Class | Properties |
   | :--- |   :----   |
@@ -204,8 +203,8 @@ config object like this
   | border-width-0 | border-width:0; |
 
 + border radius
-> set border-radius any number and unit   
-> you can use <code>br</code> or <code>border-radius</code>   
+  > set border-radius any number and unit   
+  > you can use <code>br</code> or <code>border-radius</code>   
 
   | Class | Properties |
   | :--- |   :----   |
@@ -213,14 +212,14 @@ config object like this
   | border-radius-15% | border-radius:15%; |
 
 + circle
-> set border-radius 50% is static preset
+  > set border-radius 50% is static preset
 
   | Class | Properties |
   | :--- |   :----   |
   | circle | border-radius:50%; |
 
 + box-sizing
-> set box-sizng
+  > set box-sizng
 
   | Class | Properties |
   | :--- |   :----   |
@@ -228,9 +227,9 @@ config object like this
   | box-sizing-border-box | box-sizing:border-box; |
 
 + color 
-> Amazing! you can use all color by hex and set opacity, and you can define color name!   
-> support 3bit and 6bit and 8bit(rgba) hex just copy design like figma!! just copy it !   
-> color has some shortcut 
+  > Amazing! you can use all color by hex and set opacity, and you can define color name!   
+  > support 3bit and 6bit and 8bit(rgba) hex just copy design like figma!! just copy it !   
+  > color has some shortcut 
 
   | shortcut | mean | 
   | :---: | :---: | 
@@ -239,16 +238,16 @@ config object like this
   | bg | background |
   | border-c | border-color |
 
-  | Class | Properties | preview |
-  | :--- |   :----   | :---: |
-  | c-red | color:rgba(255, 0, 0, 1) | <div style="width:25px;height:25px;background:rgba(255, 0, 0, 1);margin:0 auto;"></div> |
-  | text-f00-25 | background:rgba(255, 0, 0, 0.25) | <div style="width:25px;height:25px;background:rgba(255, 0, 0, 0.25);margin:0 auto;"></div> |
-  | color-#54a0ff | color:rgba(84, 160, 255, 1) | <div style="width:25px;height:25px;background:rgba(84, 160, 255, 1);margin:0 auto;"></div> |
-  | bg-#fffc0140 | background:rgba(255, 252, 1, 0.25) | <div style="width:25px;height:25px;background:rgba(255, 252, 1, 0.25);margin:0 auto;"></div> |
-  | background-10ac84 | background:rgba(16, 172, 132, 1)| <div style="width:25px;height:25px;background:rgba(16, 172, 132, 1);margin:0 auto;"></div> |
-  | border-c-000 | background:rgba(0, 0, 0, 1) | <div style="width:25px;height:25px;background:rgba(0, 0, 0, 1);margin:0 auto;"></div> |
-  | border-color-000-15 | background:rgba(0, 0, 0, 0.15) | <div style="width:25px;height:25px;background:rgba(0, 0, 0, 0.15);margin:0 auto;"></div> |
+  | Class | Properties |
+  | :--- |   :----  |
+  | c-red | color:rgba(255, 0, 0, 1)|
+  | text-f00-25 | background:rgba(255, 0, 0, 0.25)|
+  | color-#54a0ff | color:rgba(84, 160, 255, 1)|
+  | bg-#fffc0140 | background:rgba(255, 252, 1, 0.25)|
+  | background-10ac84 | background:rgba(16, 172, 132, 1)|
+  | border-c-000 | background:rgba(0, 0, 0, 1)|
+  | border-color-000-15 | background:rgba(0, 0, 0, 0.15)|
 
  <!-- todo  -->
- # Add soon
+ # Add soon ...
 
