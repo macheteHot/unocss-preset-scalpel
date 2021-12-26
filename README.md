@@ -22,17 +22,27 @@ import { presetScalpel } from 'unocss-preset-scalpel'
 
 export default defineConfig({
   presets: [
-    presetScalpel(),
+    presetScalpel({
+      // config 
+    }),
   ],
 })
 ```
 
 ## why Scalpel
-In Atomic css you can use any colors and any unit with number why you need memorize rules? like tailwindcss <del><code>w-1{width: 0.25rem;}</code></del> why 1 mean 0.25 if you need 0.25rem just write it ! like <code>w-0.25rem</code> scalpel-like precision of course you can use some shortcuts also you can write like native css <code>width-0.25rem</code> 
+Atomic css should scalpel-like precision
 
+you can use any colors and any unit with number 
+
+why you need memorize rules? like tailwindcss <del><code>w-1{width: 0.25rem;}</code></del>
+
+why 1 mean 0.25 if you need 0.25rem just write it ! like <code>w-0.25rem</code>
+
+you can write like native css <code>width-0.25rem</code> 
 
 Usually you can write like native css use <code>-</code> concat key value like <code>display-flex</code>
 
+of course you can use some shortcuts
 
 ## shortcuts
 #### native css is sooooo long this preset define some shortcuts 
@@ -49,14 +59,13 @@ Usually you can write like native css use <code>-</code> concat key value like <
 | l | left | |
 | x | left and right | |
 | y | top and bottom | |
-| m- | Minus sign | negative number |
+| m- | Minus sign | negative number in some value  |
 
 ## special unit
 #### there are some special units 
 | unit | mean | desc |
 | :---: | :----: | :--- |
 | p | % | percent eq % |
-| % | % | of course you can use % like width-25.5% |
 | v | variable | usually used for px to rem |
 
 
