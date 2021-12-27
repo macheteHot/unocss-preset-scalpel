@@ -1,6 +1,6 @@
 import { Preset } from 'unocss'
 import { PSEUDO_STR } from './constant'
-import { IScleplOptions } from './types'
+import { IScalpelOptions } from './types'
 import { setConfig as setConfigToUtils } from './utils'
 
 import alignItems from './rules/alignItems'
@@ -46,7 +46,7 @@ import width from './rules/width'
 import wordBreak from './rules/wordBreak'
 import zIndex from './rules/zIndex'
 
-const presetConfig: Required<IScleplOptions> = {
+const presetConfig: Required<IScalpelOptions> = {
   unit: 'px',
   important: false,
   colors: {
@@ -71,7 +71,7 @@ const presetConfig: Required<IScleplOptions> = {
   },
 }
 
-function setConfig(config: Partial<IScleplOptions>): void {
+function setConfig(config: Partial<IScalpelOptions>): void {
   const {
     colors,
     mediaQueries,
@@ -95,7 +95,7 @@ function setConfig(config: Partial<IScleplOptions>): void {
 /**
  * @public
  */
-export function presetScalpel(options?: IScleplOptions): Preset {
+export function presetScalpel(options?: IScalpelOptions): Preset {
   setConfig(options ?? {})
 
   return {
@@ -120,14 +120,14 @@ export function presetScalpel(options?: IScleplOptions): Preset {
       },
       // PSEUDO
       (matcher) => {
-        const [, psedu = ''] =
+        const [, pseudo = ''] =
           matcher.match(new RegExp(`^(${PSEUDO_STR}):`)) ?? []
-        if (!psedu) {
+        if (!pseudo) {
           return matcher
         }
         return {
           matcher: matcher.replace(/^.+?:(.*)$/, '$1'),
-          selector: (s) => `${s}:${psedu}`,
+          selector: (s) => `${s}:${pseudo}`,
         }
       },
     ],

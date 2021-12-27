@@ -14,15 +14,15 @@ const dirname = path.dirname(url.fileURLToPath(import.meta.url))
  */
 export function genSnapshot(data, fname, update) {
   const snapshotDir = path.resolve(dirname, snapshotDirName)
-  const fpath = path.join(snapshotDir, `${fname}.css.snap`)
+  const filePath = path.join(snapshotDir, `${fname}.css.snap`)
 
   if (!fs.existsSync(snapshotDir)) {
     fs.mkdirSync(snapshotDir)
   }
 
-  if (!fs.existsSync(fpath) || update) {
-    fs.writeFileSync(fpath, data, 'utf-8')
+  if (!fs.existsSync(filePath) || update) {
+    fs.writeFileSync(filePath, data, 'utf-8')
     return data
   }
-  return fs.readFileSync(fpath, 'utf-8')
+  return fs.readFileSync(filePath, 'utf-8')
 }

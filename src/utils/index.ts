@@ -1,10 +1,10 @@
 import { CSSObject } from 'unocss'
 import Decimal from 'decimal.js'
-import { IDirection, IScleplOptions } from '../types'
+import { IDirection, IScalpelOptions } from '../types'
 
-let presetConfig: Required<IScleplOptions>
+let presetConfig: Required<IScalpelOptions>
 
-export function setConfig(config: Required<IScleplOptions>) {
+export function setConfig(config: Required<IScalpelOptions>) {
   presetConfig = config
 }
 export function isFunction(payload: unknown): boolean {

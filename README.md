@@ -39,7 +39,7 @@ Atomic css should scalpel-like precision
 
 use any colors and any unit with number
 
-why we need memorize rules? like tailwindcss <del><code>w-1{width: 0.25rem;}</code></del>
+why we need memorize rules? like tailwind css <del><code>w-1{width: 0.25rem;}</code></del>
 
 why 1 mean 0.25 if need 0.25rem just write it ! like <code>w-0.25rem</code>
 
@@ -76,13 +76,13 @@ of course we has some shortcuts
 |  p   |    %     | percent eq %               |
 |  v   | variable | usually used for px to rem |
 
-## pesudo
+## pseudo
 
-use pesudo before any className
+use pseudo before any className
 
 like this
 
-|    pesudo     |               |                   |             |
+|    pseudo     |               |                   |             |
 | :-----------: | :-----------: | :---------------: | :---------: |
 |   any-link    |     blank     |      checked      |   current   |
 |    default    |    defined    |     disabled      |    drop     |
@@ -103,7 +103,7 @@ like this
 
 ### media query
 
-> use media query before any className and pesudo
+> use media query before any className and pseudo
 >
 > > the default media query has <code>sm</code> <code>md</code> <code>lg</code> <code>xl</code>
 > > like this
@@ -183,7 +183,7 @@ config object like this
   | height-3.1415  | height:3.1415%  |
   | h-100v         | height:6.25rem  |
 
-- ### min max widht and height
+- ### min max width and height
 
   > add min- or max- before width or height  
   > support shortcut <code>w</code> <code>h</code>
@@ -254,7 +254,7 @@ config object like this
 
 - ### box-sizing
 
-  > set box-sizng
+  > set box-sizing
 
   | Class                  | Properties              |
   | :--------------------- | :---------------------- |
@@ -264,7 +264,7 @@ config object like this
 - ### color
 
   > Amazing! we can use all color by hex and set opacity, and you can define color name!  
-  > support 3-digit and 6-digit and 8-digit (rgba) hex just copy from design darft like figma!! just copy it !  
+  > support 3-digit and 6-digit and 8-digit (rgba) hex just copy from design draft like figma!! just copy it !  
   > color has some shortcut
 
   | Shortcut |     Desc     |
@@ -291,8 +291,8 @@ config object like this
 
   | Class          | Properties      |
   | :------------- | :-------------- |
-  | cursor-pointer | curosr:pointer; |
-  | cursor-no-drop | curosr:no-drop; |
+  | cursor-pointer | cursor:pointer; |
+  | cursor-no-drop | cursor:no-drop; |
 
   > enum values
 
@@ -584,10 +584,10 @@ config object like this
 
   > set object file
 
-  | Class              | Properties           |
-  | :----------------- | :------------------- |
-  | object-fit-fill    | object-filt:fill;    |
-  | object-fit-contain | object-filt:contain; |
+  | Class              | Properties          |
+  | :----------------- | :------------------ |
+  | object-fit-fill    | object-fit:fill;    |
+  | object-fit-contain | object-fit:contain; |
 
   > enum values
 

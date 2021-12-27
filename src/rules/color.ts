@@ -1,7 +1,7 @@
 /**
  * order 520 460 + 60
  */
-import { IScleplOptions } from 'src/types'
+import { IScalpelOptions } from 'src/types'
 import { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer, textToRgbText } from '../utils'
 import { assertUnreachable } from '../utils/typeTools'
@@ -46,7 +46,7 @@ function handleColor({ groups }: RegExpMatchArray) {
   return ConvertToCssObject([`${prefix}: ${newColor}`])
 }
 
-export default (config: Required<IScleplOptions>) => {
+export default (config: Required<IScalpelOptions>) => {
   const colorKeysStr = Object.keys(config.colors).join('|')
   return [
     [
