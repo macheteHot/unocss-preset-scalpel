@@ -432,17 +432,34 @@ config object like this
   > set sets how a flex <i>item</i> will grow or shrink to fit the space available in its flex container.  
   > like flex-\<number\> or native value
 
-  | Class    | Properties |
-  | :------- | :--------- |
-  | flex-0   | flex;0;    |
-  | flex-1   | flex;1;    |
-  | flex-999 | flex;999;  |
-  | flex-auto | flex;auto;  |
+  | Class     | Properties |
+  | :-------- | :--------- |
+  | flex-0    | flex:0;    |
+  | flex-1    | flex:1;    |
+  | flex-999  | flex:999;  |
+  | flex-auto | flex:auto; |
 
   > support native values
 
   | Value |      |      |
   | :---: | :--: | :--: |
   | null  | auto | none |
+
+- ### flexShrinkAndGrow
+
+  > set flex-shrink or flex-grow
+
+  | Class               | Properties           |
+  | :------------------ | :------------------- |
+  | flex-shrink-20      | flex-shrink:20;      |
+  | flex-grow-5         | flex-grow:5;         |
+  | flex-shrink-initial | flex-shrink:initial; |
+
+  > support native values
+
+  |  Value  |
+  | :-----: |
+  | initial |
+  | inherit |
 
 # Add soon ...
