@@ -396,26 +396,28 @@ config object like this
   | around   | space-around  |
   | evenly   | space-evenly  |
 
+  > support values
+
   | justify values | align values |
-  | :------------- | :----------- |
-  | center         | auto         |
-  | center         | baseline     |
-  | start          | center       |
-  | end            | end          |
-  | flex-start     | flex-end     |
-  | flex-end       | flex-start   |
-  | left           | inherit      |
-  | right          | initial      |
-  | space-between  | normal       |
-  | between        | self-end     |
-  | space-around   | self-start   |
-  | around         | start        |
-  | space-evenly   | stretch      |
-  | evenly         | unset        |
-  | stretch        |              |
-  | inherit        |              |
-  | initial        |              |
-  | unset          |              |
+  | :------------: | :----------: |
+  |     center     |     auto     |
+  |     center     |   baseline   |
+  |     start      |    center    |
+  |      end       |     end      |
+  |   flex-start   |   flex-end   |
+  |    flex-end    |  flex-start  |
+  |      left      |   inherit    |
+  |     right      |   initial    |
+  | space-between  |    normal    |
+  |    between     |   self-end   |
+  |  space-around  |  self-start  |
+  |     around     |    start     |
+  |  space-evenly  |   stretch    |
+  |     evenly     |    unset     |
+  |    stretch     |              |
+  |    inherit     |              |
+  |    initial     |              |
+  |     unset      |              |
 
   | normal
 
@@ -424,5 +426,23 @@ config object like this
   | flex-center-center       | display:flex;<br />justify-content:center;<br />align-items:center;        |
   | flex-flex-start-flex-end | display:flex;<br />justify-content:flex-start;<br />align-items:flex-end;  |
   | flex-between-center      | display:flex;<br />justify-content:space-between;<br />align-items:center; |
+
+- ### flex num
+
+  > set sets how a flex <i>item</i> will grow or shrink to fit the space available in its flex container.  
+  > like flex-\<number\> or native value
+
+  | Class    | Properties |
+  | :------- | :--------- |
+  | flex-0   | flex;0;    |
+  | flex-1   | flex;1;    |
+  | flex-999 | flex;999;  |
+  | flex-auto | flex;auto;  |
+
+  > support native values
+
+  | Value |      |      |
+  | :---: | :--: | :--: |
+  | null  | auto | none |
 
 # Add soon ...
