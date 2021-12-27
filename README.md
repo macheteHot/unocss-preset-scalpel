@@ -160,9 +160,11 @@ config object like this
 }
 ```
 
-## rule and use demo
+## How to use
 
 - ### width and height
+
+  > support shortcut <code>w</code> <code>h</code>
 
   | Class          | Properties      |
   | :------------- | :-------------- |
@@ -183,7 +185,8 @@ config object like this
 
 - ### min max widht and height
 
-  > add min- or max- before width or height
+  > add min- or max- before width or height  
+  > support shortcut <code>w</code> <code>h</code>
 
   | Class             | Properties        |
   | :---------------- | :---------------- |
@@ -196,33 +199,24 @@ config object like this
 
   > use square set same width and height
 
-  | Class         | Properties                 |
-  | :------------ | :------------------------- |
-  | square-25     | width:25px;height:25px;    |
-  | square-0.25vh | width:0.25vh;height:0.25vh |
+  | Class         | Properties                      |
+  | :------------ | :------------------------------ |
+  | square-25     | width:25px;<br/>height:25px;    |
+  | square-0.25vh | width:0.25vh;<br/>height:0.25vh |
 
 - ### margin and padding
 
-  > set margin and padding with direction
+  > set margin and padding with direction  
+  > this value has <b>negative number</b>  
+  > support shortcut <code>m</code> <code>p</code> <code>m-</code> <code>t</code> <code>r</code> <code>b</code> <code>l</code> <code>x</code> <code>y</code>
 
-  | Class       | Properties                              |
-  | :---------- | :-------------------------------------- |
-  | m-25        | margin:25px;                            |
-  | p-25        | padding:25px;                           |
-  | m-m-25      | margin:-25px;                           |
-  | p-x-999vh   | padding-left:999vh;padding-right:999vh; |
-  | m-l-0.25rem | margin-right:0.25rem;                   |
-
-- ### alignItems
-
-  > set align-items
-
-  | Class                  | Properties              |
-  | :--------------------- | :---------------------- |
-  | align-items-baseline   | align-items:baseline;   |
-  | align-items-center     | align-items:center;     |
-  | align-items-end        | align-items:end;        |
-  | align-items-flex-start | align-items:flex-start; |
+  | Class       | Properties                                   |
+  | :---------- | :------------------------------------------- |
+  | m-25        | margin:25px;                                 |
+  | p-25        | padding:25px;                                |
+  | m-m-25      | margin:-25px;                                |
+  | p-x-999vh   | padding-left:999vh;<br/>padding-right:999vh; |
+  | m-l-0.25rem | margin-right:0.25rem;                        |
 
 - ### border
 
@@ -231,16 +225,16 @@ config object like this
 
   > for visualization default has <code>border-style: solid</code> and <code>border-color: rgba(0,0,0,1)</code>
 
-  | Class            | Properties                                    |
-  | :--------------- | :-------------------------------------------- |
-  | border-1         | border-width:1px                              |
-  | border-x-3       | border-left-width:3px;border-right-width:3px; |
-  | border-l-0       | border-left-width:0;                          |
-  | border-r-1.25rem | border-right-width:1.25rem;                   |
-  | border-w-2       | border-width:2px;                             |
-  | border-width-0   | border-width:0;                               |
+  | Class            | Properties                                         |
+  | :--------------- | :------------------------------------------------- |
+  | border-1         | border-width:1px                                   |
+  | border-x-3       | border-left-width:3px;<br/>border-right-width:3px; |
+  | border-l-0       | border-left-width:0;                               |
+  | border-r-1.25rem | border-right-width:1.25rem;                        |
+  | border-w-2       | border-width:2px;                                  |
+  | border-width-0   | border-width:0;                                    |
 
-- ### border radius
+- ### border-radius
 
   > set border-radius any number and unit  
   > use <code>br</code> or <code>border-radius</code>
@@ -290,17 +284,6 @@ config object like this
   | border-c-000        | background:rgba(0, 0, 0, 1)        |
   | border-color-000-15 | background:rgba(0, 0, 0, 0.15)     |
 
-- ### columnGap
-
-  > set column-gap with any number unit or native value  
-  > support native value is <code>unset</code> <code>initial</code> <code>inherit</code> <code>normal</code>
-
-  | Class             | Properties          |
-  | :---------------- | :------------------ |
-  | column-gap-normal | column-gap:normal;  |
-  | column-gap-0.25cm | column-gap:0.25cm;  |
-  | column-gap-99999  | column-gap:99999px; |
-
 - ### cursor
 
   > set cursor value  
@@ -311,7 +294,7 @@ config object like this
   | cursor-pointer | curosr:pointer; |
   | cursor-no-drop | curosr:no-drop; |
 
-  > support values
+  > enum values
 
   |    Value     |             |               |
   | :----------: | :---------: | :-----------: |
@@ -338,7 +321,7 @@ config object like this
   | d-table      | display:table; |
   | display-flex | display:flex;  |
 
-  > support values
+  > enum values
 
   |    Value    |             |              |
   | :---------: | :---------: | :----------: |
@@ -349,7 +332,7 @@ config object like this
   | inline-flex |    flex     | inline-block |
   |   inline    |    block    |              |
 
-- ### flexBasis
+- ### flex-basis
 
   > set flex-basis use nonnegative number and unit or native
 
@@ -359,7 +342,7 @@ config object like this
   | flex-basis-3.25rem | flex-basis:3.25rem; |
   | flex-basis-auto    | flex-basis:auto;    |
 
-  > support values
+  > enum values
 
   |  Value  |         |      |
   | :-----: | :-----: | :--: |
@@ -377,15 +360,13 @@ config object like this
   | flex-column                | flex-direction;column;         |
   | flex-column-reverse        | flex-direction;column-reverse; |
 
-  > support values
+  > enum values
 
   | Value |             |        |                |
   | :---: | :---------: | :----: | :------------: |
   |  row  | row-reverse | column | column-reverse |
 
-  <!-- todo  -->
-
-- ### flexJustAli
+- ### flex with justify-content and align-items
 
   > set display flex with justify-content with align-items in one className  
   > rule is <b>flex-\<justify>-\<align></b>
@@ -396,12 +377,11 @@ config object like this
   | around   | space-around  |
   | evenly   | space-evenly  |
 
-  > support values
+  > enum values
 
   | justify values | align values |
   | :------------: | :----------: |
   |     center     |     auto     |
-  |     center     |   baseline   |
   |     start      |    center    |
   |      end       |     end      |
   |   flex-start   |   flex-end   |
@@ -414,7 +394,7 @@ config object like this
   |     around     |    start     |
   |  space-evenly  |   stretch    |
   |     evenly     |    unset     |
-  |    stretch     |              |
+  |    stretch     |   baseline   |
   |    inherit     |              |
   |    initial     |              |
   |     unset      |              |
@@ -427,7 +407,27 @@ config object like this
   | flex-flex-start-flex-end | display:flex;<br />justify-content:flex-start;<br />align-items:flex-end;  |
   | flex-between-center      | display:flex;<br />justify-content:space-between;<br />align-items:center; |
 
-- ### flex num
+- ### align-items
+
+  > set align-items enum values look ⬆
+
+  | Class                  | Properties              |
+  | :--------------------- | :---------------------- |
+  | align-items-baseline   | align-items:baseline;   |
+  | align-items-center     | align-items:center;     |
+  | align-items-end        | align-items:end;        |
+  | align-items-flex-start | align-items:flex-start; |
+
+- ### justify-content
+
+  > set justify-content enum values look ⬆
+
+  | Class                   | Properties                     |
+  | :---------------------- | :----------------------------- |
+  | justify-content-left    | justify-content:left;          |
+  | justify-content-between | justify-content:space-between; |
+
+- ### flex-num
 
   > set sets how a flex <i>item</i> will grow or shrink to fit the space available in its flex container.  
   > like flex-\<number\> or native value
@@ -445,7 +445,7 @@ config object like this
   | :---: | :--: | :--: |
   | null  | auto | none |
 
-- ### flexShrinkAndGrow
+- ### flex-shrink and flex-grow
 
   > set flex-shrink or flex-grow
 
@@ -462,4 +462,323 @@ config object like this
   | initial |
   | inherit |
 
-# Add soon ...
+- ### flex-wrap
+
+  > set flex-wrap
+
+  | Class          | Properties      |
+  | :------------- | :-------------- |
+  | flex-wrap-wrap | flex-wrap:wrap; |
+
+  > enum values
+
+  |    Value     |
+  | :----------: |
+  |   inherit    |
+  |   initial    |
+  |    nowrap    |
+  |     wrap     |
+  | wrap-reverse |
+
+- ### font-size
+
+  > set font size  
+  > support shortcut <code>fs</code>
+
+  | Class          | Properties        |
+  | :------------- | :---------------- |
+  | font-size-12   | flex-wrap:12px;   |
+  | font-size-5rem | flex-wrap:5rem;   |
+  | fs-0.22vh      | flex-wrap:0.22vh; |
+
+- ### font-weight
+
+  > set font weight  
+  > support shortcut <code>fw</code>
+
+  | Class              | Properties          |
+  | :----------------- | :------------------ |
+  | font-weight-bolder | font-weight:bolder; |
+  | fw-100             | font-weight:100;    |
+
+  > enum values
+
+  |  Value  |         |         |
+  | :-----: | :-----: | :-----: |
+  |   100   |   200   |   300   |
+  |   400   |   500   |   600   |
+  |   700   |   800   |   000   |
+  |  bold   | bolder  | inherit |
+  | initial | lighter | normal  |
+  |  unset  |         |         |
+
+- ### gap
+
+  > set column-gap and row-gap in one className
+
+  | Class      | Properties                             |
+  | :--------- | :------------------------------------- |
+  | gap-0      | column-gap:0;<br/>row-gap:0;           |
+  | gap-25.5p  | column-gap:25.5%;<br/>row-gap:25.5%;   |
+  | gap-15%    | column-gap:15%;<br/>row-gap:15%;       |
+  | gap-normal | column-gap:normal;<br/>row-gap:normal; |
+
+  > enum values
+
+  |  Value  |
+  | :-----: |
+  |  unset  |
+  | initial |
+  | inherit |
+  | normal  |
+
+- ### column-gap
+
+  > set column-gap with any number unit or native value
+  > support shortcut <code>c-gap</code>
+
+  | Class             | Properties          |
+  | :---------------- | :------------------ |
+  | column-gap-normal | column-gap:normal;  |
+  | c-gap-0.25cm      | column-gap:0.25cm;  |
+  | c-gap-99999       | column-gap:99999px; |
+
+  > enum values same [gap](#gap) ⬆️
+
+- ### row-gap
+
+  > set row-gap with any number unit or native value  
+  > support shortcut <code>r-gap</code>  
+  > support native value is <code>unset</code> <code>initial</code> <code>inherit</code> <code>normal</code>
+
+  | Class          | Properties       |
+  | :------------- | :--------------- |
+  | r-gap-normal   | row-gap:normal;  |
+  | row-gap-0.25cm | row-gap:0.25cm;  |
+  | r-gap-99999    | row-gap:99999px; |
+
+  > enum values same [gap](#gap) ⬆️
+
+- ### letter-spacing
+
+  > set letter spacing use any number and unit  
+  > this value has <b>negative number</b>
+
+  | Class                      | Properties                |
+  | :------------------------- | :------------------------ |
+  | letter-spacing-3.1415rem   | letter-spacing:3.1415rem  |
+  | letter-spacing-m-3.1415rem | letter-spacing:-3.1415rem |
+  | letter-spacing-9999px      | letter-spacing:9999px     |
+
+- ### line-height
+
+  > set line height use nonnegative number and any unit
+  > support shortcut <code>lh</code>
+
+  | Class          | Properties           |
+  | :------------- | :------------------- |
+  | lh-0.25rem     | line-height:0.25rem; |
+  | line-height-20 | line-height:20px;    |
+
+- ### object-fit
+
+  > set object file
+
+  | Class              | Properties           |
+  | :----------------- | :------------------- |
+  | object-fit-fill    | object-filt:fill;    |
+  | object-fit-contain | object-filt:contain; |
+
+  > enum values
+
+  |  Value  |            |         |
+  | :-----: | :--------: | :-----: |
+  |  fill   |  contain   |  cover  |
+  |  none   | scale-down | inherit |
+  | initial |   revert   |  unset  |
+
+- ### opacity
+
+  > set opacity (1 to 100 ) ÷ 100
+
+  | Class      | Properties   |
+  | :--------- | :----------- |
+  | opacity-20 | opacity:0.2  |
+  | opacity-55 | opacity:0.55 |
+
+- ### orientation
+
+  > set orientation with any number any unit  
+  > this value has <b>negative number</b> use <code>-m</code>  
+  > support shortcut <code>t</code> <code>r</code> <code>b</code> <code>l</code> <code>-m</code>
+
+  | Class          | Properties       |
+  | :------------- | :--------------- |
+  | t-20           | top:20px;        |
+  | bottom-3.14rem | bottom:3.14rem;  |
+  | b-m-3.14rem    | bottom:-3.14rem; |
+  | r-m-60vh       | right:-60vh;     |
+
+- ### overflow
+
+  > set overflow-x or overflow-y
+
+  | Class             | Properties         |
+  | :---------------- | :----------------- |
+  | overflow-x-scroll | overflow-x:scroll; |
+  | overflow-y-auto   | overflow-y:auto;   |
+
+  > enum values
+
+  |  Value  |
+  | :-----: |
+  | hidden  |
+  |  auto   |
+  | visible |
+  | scroll  |
+  | inherit |
+
+- ### position
+
+  > set position
+
+  | Class             | Properties         |
+  | :---------------- | :----------------- |
+  | position-sticky   | position:sticky;   |
+  | position-absolute | position:absolute; |
+  | position-fixed    | position:fixed;    |
+
+  > enum values
+
+  |  Value  |          |        |
+  | :-----: | :------: | :----: |
+  | static  | relative | sticky |
+  |  unset  | absolute | fixed  |
+  | inherit | initial  |   -    |
+
+- ### text-align
+
+  > set text-align
+  > support shortcut <code>text</code>
+
+  | Class              | Properties          |
+  | :----------------- | :------------------ |
+  | text-center        | text-align:center;  |
+  | text-align-justify | text-align:justify; |
+
+  > enum values
+
+  |    Value     |        |         |
+  | :----------: | :----: | :-----: |
+  |    start     |  end   |  left   |
+  |    right     | center | justify |
+  | match-parent |   -    |    -    |
+
+- ### text-align-last
+
+  > set text-align-last
+  > support shortcut <code>text-last</code>
+
+  | Class                 | Properties              |
+  | :-------------------- | :---------------------- |
+  | text-last-center      | text-align-last:center; |
+  | text-align-last-start | text-align-last:start;  |
+
+  > enum values
+
+  | Value  |         |         |
+  | :----: | :-----: | :-----: |
+  |  auto  |  left   |  right  |
+  | center | justify |  start  |
+  |  end   | initial | inherit |
+
+- ### text-decoration
+
+  > set text-decoration
+  > support shortcut <code>text</code>
+
+  | Class                    | Properties                 |
+  | :----------------------- | :------------------------- |
+  | text-underline           | text-decoration:underline; |
+  | text-decoration-overline | text-decoration:overline;  |
+
+  > enum values
+
+  |    Value     |           |          |
+  | :----------: | :-------: | :------: |
+  |     none     | underline | overline |
+  | line-through |   blink   | inherit  |
+
+- ### text-ellipsis
+
+  > set ellipsis support multiline
+  > support shortcut <code>ellipsis</code>
+
+  | Class           | Properties                                                                                                                           |
+  | :-------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+  | ellipsis        | overflow: hidden;<br/>text-overflow: ellipsis;<br/>white-space: nowrap                                                               |
+  | ellipsis-2      | overflow: hidden;<br/>text-overflow: ellipsis;<br/>display: -webkit-box;<br/>-webkit-line-clamp:2;</br>-webkit-box-orient: vertical; |
+  | text-ellipsis-5 | overflow: hidden;<br/>text-overflow: ellipsis;<br/>display: -webkit-box;<br/>-webkit-line-clamp:5;</br>-webkit-box-orient: vertical; |
+
+- ### user-select
+
+  > set user-select
+  > support shortcut <code>select</code>
+
+  | Class       | Properties   |
+  | :---------- | :----------- |
+  | select-auto | select:auto; |
+  | select-none | select:none; |
+
+  > enum values
+
+  | Value |         |         |
+  | :---: | :-----: | :-----: |
+  | none  |  auto   |  text   |
+  |  all  | contain | element |
+
+- ### visibility
+
+  > set visibility
+
+  | Class              | Properties          |
+  | :----------------- | :------------------ |
+  | visibility-visible | visibility:visible; |
+  | visibility-hidden  | visibility:hidden;  |
+
+  > enum values
+
+  |  Value  |         |          |
+  | :-----: | :-----: | :------: |
+  | visible | hidden  | collapse |
+  | inherit | initial |  revert  |
+  |  unset  |    -    |    -     |
+
+- ### word-break
+
+  > set word-break
+
+  | Class                | Properties            |
+  | :------------------- | :-------------------- |
+  | word-break-break-all | word-break:break-all; |
+  | word-break-keep-all  | word-break:keep-all;  |
+
+  > enum values
+
+  |   Value    |           |          |
+  | :--------: | :-------: | :------: |
+  |   normal   | break-all | keep-all |
+  | break-word |  inherit  | initial  |
+  |   unset    |     -     |    -     |
+
+- ### z-index
+
+  > set z-index with number  
+  > this value has <b>negative number</b>
+
+  | Class         | Properties     |
+  | :------------ | :------------- |
+  | z-index-0     | z-index:0;     |
+  | z-index-1     | z-index:1;     |
+  | z-index-m-5   | z-index:-5;    |
+  | z-index-99999 | z-index:99999; |

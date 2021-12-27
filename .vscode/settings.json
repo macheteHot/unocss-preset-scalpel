@@ -1,5 +1,5 @@
 {
-  "[json][jsonc][css][less][scss]": {
+  "[json][jsonc][css][less][scss][markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
