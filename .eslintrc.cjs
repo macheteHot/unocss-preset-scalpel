@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     // '@typescript-eslint/rule-name': 'error',
     camelcase: ['off'],
+    'no-param-reassign': ['off'],
     'no-shadow': ['off'],
     '@typescript-eslint/no-non-null-assertion': ['off'],
     '@typescript-eslint/no-shadow': ['error'],

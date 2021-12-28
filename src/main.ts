@@ -130,6 +130,24 @@ export function presetScalpel(options?: IScalpelOptions): Preset {
           selector: (s) => `${s}:${pseudo}`,
         }
       },
+      // important
+      (matcher) => {
+        return matcher.endsWith('!')
+          ? {
+              matcher: matcher.substring(0, matcher.length - 1),
+              body: (body) => {
+                body.forEach((v) => {
+                  if (v[1]) {
+                    v[1] += ' !important'
+                  }
+                })
+                return body
+              },
+            }
+          : {
+              matcher,
+            }
+      },
     ],
     rules: [
       alignItems(),
