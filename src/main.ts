@@ -104,18 +104,18 @@ export function presetScalpel(options?: IScalpelOptions): Preset {
     variants: [
       // MEDIA Query
       (matcher) => {
-        const [, meidaQuery = ''] =
+        const [, mediaQuery = ''] =
           matcher.match(
             new RegExp(
               `^(${Object.keys(presetConfig.mediaQueries).join('|')})@`
             )
           ) ?? []
-        if (!meidaQuery) {
+        if (!mediaQuery) {
           return matcher
         }
         return {
           matcher: matcher.replace(/^.+?@(.*)$/, '$1'),
-          parent: [`@${presetConfig.mediaQueries[meidaQuery]}`, 999999],
+          parent: [`@${presetConfig.mediaQueries[mediaQuery]}`, 999999],
         }
       },
       // PSEUDO
