@@ -488,7 +488,8 @@ config object like this
 
 - ### flex-wrap
 
-  > set flex-wrap
+  > set flex-wrap  
+  > support shortcut <code>flex</code>
 
   | Class          | Properties      |
   | :------------- | :-------------- |

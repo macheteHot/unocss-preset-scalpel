@@ -6,7 +6,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
 export default () =>
   [
     [
-      /^flex-wrap-(?<value>inherit|initial|nowrap|wrap|wrap-reverse)$/,
+      /^flex(-wrap)?-(?<value>inherit|initial|nowrap|wrap|wrap-reverse)$/,
       ({ groups }) => {
         const { value } = groups as { value: string }
         return ConvertToCssObject([`flex-wrap: ${value}`])
