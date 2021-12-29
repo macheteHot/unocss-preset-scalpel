@@ -1,7 +1,7 @@
 /**
  * order 540
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
 export default () =>

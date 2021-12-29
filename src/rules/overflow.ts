@@ -1,4 +1,4 @@
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { assertUnreachable } from '../utils/typeTools'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 /**

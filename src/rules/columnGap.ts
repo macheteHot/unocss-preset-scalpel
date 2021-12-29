@@ -1,7 +1,7 @@
 /**
  * order 582
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer, getUnitAndNum } from '../utils'
 import {
   NONNEGATIVE_NUMBER_REGEX_STR,

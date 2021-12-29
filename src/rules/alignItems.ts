@@ -1,7 +1,7 @@
 /**
  * order 220
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 
 import { ALIGN_ITEMS_ENUM_STR } from '../constant'
 

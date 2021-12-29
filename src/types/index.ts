@@ -1,4 +1,4 @@
-import { UNIT_ENUM } from '../constant'
+import type { UNIT_ENUM } from '../constant'
 
 export type IDirection = 't' | 'r' | 'b' | 'l' | 'x' | 'y'
 

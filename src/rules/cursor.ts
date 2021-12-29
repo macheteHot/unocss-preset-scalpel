@@ -1,7 +1,7 @@
 /**
  * order 340
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { CURSOR_ENUM_STR } from '../constant'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 

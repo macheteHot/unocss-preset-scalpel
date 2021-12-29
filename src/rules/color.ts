@@ -1,8 +1,8 @@
 /**
  * order 520 460 + 60
  */
-import { IScalpelOptions } from 'src/types'
-import { Rule } from 'unocss'
+import type { IScalpelOptions } from 'src/types'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer, textToRgbText } from '../utils'
 import { assertUnreachable } from '../utils/typeTools'
 

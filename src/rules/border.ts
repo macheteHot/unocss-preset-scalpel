@@ -1,17 +1,17 @@
 /**
  * order 520 460 + 60
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import {
   generatorLayer,
   getUnitAndNum,
   getDirectionOrder,
   ConvertToCssObject,
 } from '../utils'
-import { IDirection } from '../types'
+import type { IDirection } from '../types'
 
+import type { UNIT_ENUM } from '../constant'
 import {
-  UNIT_ENUM,
   UNIT_ENUM_STR,
   DIRECTION_MAP,
   NONNEGATIVE_NUMBER_REGEX_STR,

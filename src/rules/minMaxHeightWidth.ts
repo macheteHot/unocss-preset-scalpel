@@ -1,4 +1,4 @@
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer, getUnitAndNum } from '../utils'
 
 import { UNIT_ENUM_STR, NONNEGATIVE_NUMBER_REGEX_STR } from '../constant'

@@ -19,6 +19,7 @@ module.exports = {
     camelcase: ['off'],
     'no-param-reassign': ['off'],
     'no-shadow': ['off'],
+    '@typescript-eslint/consistent-type-imports': ['error'],
     '@typescript-eslint/no-non-null-assertion': ['off'],
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/no-explicit-any': 'error',

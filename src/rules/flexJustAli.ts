@@ -1,7 +1,7 @@
 /**
  * order 200
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 import { JUSTIFY_CONTENT_ENUM_STR, ALIGN_ITEMS_ENUM_STR } from '../constant'
 

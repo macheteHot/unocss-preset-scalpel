@@ -1,6 +1,6 @@
-import { CSSObject } from 'unocss'
+import type { CSSObject } from 'unocss'
 import Decimal from 'decimal.js'
-import { IDirection, IScalpelOptions } from '../types'
+import type { IDirection, IScalpelOptions } from '../types'
 
 let presetConfig: Required<IScalpelOptions>
 

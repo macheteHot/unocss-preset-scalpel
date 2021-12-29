@@ -1,7 +1,7 @@
 /**
  * order 290
  */
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 import { DISPLAY_STR } from '../constant'
 

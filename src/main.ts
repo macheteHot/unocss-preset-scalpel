@@ -1,6 +1,6 @@
-import { Preset } from 'unocss'
+import type { Preset } from 'unocss'
 import { PSEUDO_STR } from './constant'
-import { IScalpelOptions } from './types'
+import type { IScalpelOptions } from './types'
 import { setConfig as setConfigToUtils } from './utils'
 
 import alignItems from './rules/alignItems'

@@ -1,4 +1,4 @@
-import { Rule } from 'unocss'
+import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer, getUnitAndNum } from '../utils'
 /**
  * order 20

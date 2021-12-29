@@ -36,6 +36,7 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
+    "fmt": "eslint --fix .",
     "build": "tsc && vite build && api-extractor run",
     "release": "npx bumpp package.json --commit --push --tag",
     "test": "tsc && vite build && uvu tests main.test.js"
