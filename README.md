@@ -76,6 +76,10 @@ of course we has some shortcuts
 |  p   |    %     | percent eq %               |
 |  v   | variable | usually used for px to rem |
 
+## important
+
+use end with <code>!</code> className toggle <code>!important</code>
+
 ## pseudo
 
 use pseudo before any className

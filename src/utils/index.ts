@@ -77,8 +77,7 @@ export function getUnitAndNum(
 export function ConvertToCssObject(cssList: string[]): CSSObject {
   return Object.fromEntries(
     cssList.map((css) => {
-      const [key, value] = css.split(':') as [string, string]
-      return [key, presetConfig.important ? `${value} !important` : value]
+      return css.split(':')
     })
   )
 }

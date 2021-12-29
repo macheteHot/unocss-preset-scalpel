@@ -12,7 +12,7 @@ export default defineConfig(() => ({
       presets: [
         presetAttributify(),
         presetScalpel({
-          important: true,
+          important: false,
         }),
       ],
     }),
