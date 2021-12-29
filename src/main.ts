@@ -77,7 +77,7 @@ function setConfig(config: Partial<IScalpelOptions>): void {
     colors,
     mediaQueries,
     vToAny,
-    ignoreRules,
+    ignoreRules = [],
     unit = 'px',
     important = false,
   } = config

@@ -13,7 +13,6 @@ export default defineConfig(() => ({
         presetAttributify(),
         presetScalpel({
           important: false,
-          ignoreRules: [],
         }),
       ],
     }),
