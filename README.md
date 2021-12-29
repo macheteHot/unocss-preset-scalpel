@@ -153,6 +153,8 @@ config object like this
   },
   // set all css has important
   important:false,
+  // ignore some rules like ['flexBasis']
+  ignoreRules:[],
   // convert unit v
   vToAny: {
     unit: 'rem', // convert v to rem

@@ -7,6 +7,7 @@ export interface IScalpelOptions {
   unit?: typeof UNIT_ENUM[number]
   mediaQueries?: Record<string, string>
   important?: boolean
+  ignoreRules?: string[]
   vToAny?: {
     unit: typeof UNIT_ENUM[number]
     rootValue: number

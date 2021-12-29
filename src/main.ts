@@ -63,6 +63,7 @@ const presetConfig: Required<IScalpelOptions> = {
     lg: 'media (min-width: 1024px)',
     xl: 'media (min-width: 1280px)',
   },
+  ignoreRules: [],
   vToAny: {
     unit: 'rem',
     rootValue: 16,
@@ -76,10 +77,11 @@ function setConfig(config: Partial<IScalpelOptions>): void {
     colors,
     mediaQueries,
     vToAny,
+    ignoreRules,
     unit = 'px',
     important = false,
   } = config
-  Object.assign(presetConfig, { unit, important })
+  Object.assign(presetConfig, { unit, important, ignoreRules })
   if (colors) {
     Object.assign(presetConfig.colors, colors)
   }
@@ -97,6 +99,53 @@ function setConfig(config: Partial<IScalpelOptions>): void {
  */
 export function presetScalpel(options?: IScalpelOptions): Preset {
   setConfig(options ?? {})
+  const rules = [
+    { name: 'alignItems', value: alignItems },
+    { name: 'border', value: border },
+    { name: 'borderRadius', value: borderRadius },
+    { name: 'borderStyle', value: borderStyle },
+    { name: 'boxSizing', value: boxSizing },
+    { name: 'circle', value: circle },
+    { name: 'color', value: color },
+    { name: 'columnGap', value: columnGap },
+    { name: 'cursor', value: cursor },
+    { name: 'display', value: display },
+    { name: 'flexBasis', value: flexBasis },
+    { name: 'flexDirection', value: flexDirection },
+    { name: 'flexJustAli', value: flexJustAli },
+    { name: 'flexNum', value: flexNum },
+    { name: 'flexShrinkAndGrow', value: flexShrinkAndGrow },
+    { name: 'flexWrap', value: flexWrap },
+    { name: 'fontSize', value: fontSize },
+    { name: 'fontWeight', value: fontWeight },
+    { name: 'gap', value: gap },
+    { name: 'height', value: height },
+    { name: 'justifyContent', value: justifyContent },
+    { name: 'letterSpacing', value: letterSpacing },
+    { name: 'lineHeight', value: lineHeight },
+    { name: 'marginAndPadding', value: marginAndPadding },
+    { name: 'minMaxHeightWidth', value: minMaxHeightWidth },
+    { name: 'objectFit', value: objectFit },
+    { name: 'opacity', value: opacity },
+    { name: 'orientation', value: orientation },
+    { name: 'overflow', value: overflow },
+    { name: 'position', value: position },
+    { name: 'rowGap', value: rowGap },
+    { name: 'square', value: square },
+    { name: 'textAlign', value: textAlign },
+    { name: 'textAlignLast', value: textAlignLast },
+    { name: 'textDecoration', value: textDecoration },
+    { name: 'textEllipsis', value: textEllipsis },
+    { name: 'userSelect', value: userSelect },
+    { name: 'verticalAlign', value: verticalAlign },
+    { name: 'visibility', value: visibility },
+    { name: 'width', value: width },
+    { name: 'wordBreak', value: wordBreak },
+    { name: 'zIndex', value: zIndex },
+  ]
+    .filter((item) => !presetConfig.ignoreRules.includes(item.name))
+    .map((item) => item.value(presetConfig))
+    .flat(1)
 
   return {
     name: 'unocss-preset-scalpel',
@@ -150,49 +199,6 @@ export function presetScalpel(options?: IScalpelOptions): Preset {
         }
       },
     ],
-    rules: [
-      alignItems(),
-      border(),
-      borderRadius(),
-      borderStyle(),
-      boxSizing(),
-      circle(),
-      color(presetConfig),
-      columnGap(),
-      cursor(),
-      display(),
-      flexBasis(),
-      flexDirection(),
-      flexJustAli(),
-      flexNum(),
-      flexShrinkAndGrow(),
-      flexWrap(),
-      fontSize(),
-      fontWeight(),
-      gap(),
-      height(),
-      justifyContent(),
-      letterSpacing(),
-      lineHeight(),
-      marginAndPadding(),
-      minMaxHeightWidth(),
-      objectFit(),
-      opacity(),
-      orientation(),
-      overflow(),
-      position(),
-      rowGap(),
-      square(),
-      textAlign(),
-      textAlignLast(),
-      textDecoration(),
-      textEllipsis(),
-      userSelect(),
-      verticalAlign(),
-      visibility(),
-      width(),
-      wordBreak(),
-      zIndex(),
-    ].flat(1),
+    rules,
   }
 }
