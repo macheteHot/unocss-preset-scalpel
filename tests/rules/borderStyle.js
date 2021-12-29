@@ -10,4 +10,4 @@ export default [
   'inset',
   'outset',
   'inherit',
-].map((_) => `border-style-${_}`)
+].map((v) => ['border', 'border-style'].map((prefix) => `${prefix}-${v}`))

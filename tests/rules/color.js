@@ -5,6 +5,7 @@ export default [
   'bg',
   'background',
   'border-color',
+  'border',
   'border-c',
 ].map((t) =>
   [
