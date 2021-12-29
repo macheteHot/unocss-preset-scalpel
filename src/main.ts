@@ -61,10 +61,6 @@ function setConfig(config: Partial<IScalpelOptions>): void {
  */
 export function presetScalpel(options?: IScalpelOptions): Preset {
   setConfig(options ?? {})
-  // const rules = rules
-  //   .filter((item) => !presetConfig.ignoreRules.includes(item.name))
-  //   .map((item) => item.value(presetConfig))
-  //   .flat(1)
 
   return {
     name: 'unocss-preset-scalpel',

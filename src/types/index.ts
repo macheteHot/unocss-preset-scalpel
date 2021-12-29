@@ -3,6 +3,9 @@ import type { UNIT_ENUM } from '../constant'
 export type IDirection = 't' | 'r' | 'b' | 'l' | 'x' | 'y'
 
 export interface IScalpelOptions {
+  /**
+   * @default { red: '#f00', white: '#fff', black: '#000', blue: '#00f', yellow: '#ff0', transparent: 'transparent'}
+   */
   colors?: Record<string, string>
   /**
    * @default 'px'

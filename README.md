@@ -289,7 +289,8 @@ config object like this
 - ### color
 
   > Amazing! we can use all color by hex and set opacity, and you can define color name!  
-  > support 3-digit and 6-digit and 8-digit (rgba) hex just copy from design draft like figma!! just copy it !  
+  > has special value <b>transparent</b>  
+  > use 3-digit and 6-digit and 8-digit (rgba) hex just copy from design draft like figma!! just copy it !  
   > color has some shortcut
 
   | Shortcut |     Desc     |
@@ -300,15 +301,16 @@ config object like this
   | border-c | border-color |
   |  border  | border-color |
 
-  | Class               | Properties                         |
-  | :------------------ | :--------------------------------- |
-  | c-red               | color:rgba(255, 0, 0, 1)           |
-  | text-f00-25         | background:rgba(255, 0, 0, 0.25)   |
-  | color-#54a0ff       | color:rgba(84, 160, 255, 1)        |
-  | bg-#fffc0140        | background:rgba(255, 252, 1, 0.25) |
-  | background-10ac84   | background:rgba(16, 172, 132, 1)   |
-  | border-000          | background:rgba(0, 0, 0, 1)        |
-  | border-color-000-15 | background:rgba(0, 0, 0, 0.15)     |
+  | Class               | Properties                          |
+  | :------------------ | :---------------------------------- |
+  | c-red               | color:rgba(255, 0, 0, 1);           |
+  | c-transparent       | color:transparent;                  |
+  | text-f00-25         | background:rgba(255, 0, 0, 0.25);   |
+  | color-#54a0ff       | color:rgba(84, 160, 255, 1);        |
+  | bg-#fffc0140        | background:rgba(255, 252, 1, 0.25); |
+  | background-10ac84   | background:rgba(16, 172, 132, 1);   |
+  | border-000          | background:rgba(0, 0, 0, 1);        |
+  | border-color-000-15 | background:rgba(0, 0, 0, 0.15);     |
 
 - ### cursor
 
