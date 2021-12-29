@@ -110,6 +110,7 @@ export function presetScalpel(options?: IScalpelOptions): Preset {
               `^(${Object.keys(presetConfig.mediaQueries).join('|')})@`
             )
           ) ?? []
+
         if (!mediaQuery) {
           return matcher
         }

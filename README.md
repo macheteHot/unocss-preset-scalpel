@@ -238,6 +238,25 @@ config object like this
   | border-w-2       | border-width:2px;                                  |
   | border-width-0   | border-width:0;                                    |
 
+- ### border-style
+
+  > set border-style  
+  > support shortcut <code>border</code>
+
+  | Class              | Properties           |
+  | :----------------- | :------------------- |
+  | border-style-solid | border-style:solid;  |
+  | border-dotted      | border-style:dotted; |
+
+  > enum values
+
+  | Value  |         |        |
+  | :----: | :-----: | :----: |
+  |  none  | hidden  | dotted |
+  | dashed |  solid  | double |
+  | groove |  ridge  | inset  |
+  | outset | inherit |   -    |
+
 - ### border-radius
 
   > set border-radius any number and unit  
@@ -277,6 +296,7 @@ config object like this
   |   text   |    color     |
   |    bg    |  background  |
   | border-c | border-color |
+  |  border  | border-color |
 
   | Class               | Properties                         |
   | :------------------ | :--------------------------------- |
@@ -285,7 +305,7 @@ config object like this
   | color-#54a0ff       | color:rgba(84, 160, 255, 1)        |
   | bg-#fffc0140        | background:rgba(255, 252, 1, 0.25) |
   | background-10ac84   | background:rgba(16, 172, 132, 1)   |
-  | border-c-000        | background:rgba(0, 0, 0, 1)        |
+  | border-000          | background:rgba(0, 0, 0, 1)        |
   | border-color-000-15 | background:rgba(0, 0, 0, 0.15)     |
 
 - ### cursor

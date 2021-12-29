@@ -14,6 +14,7 @@ const colorType = [
   'background',
   'border-color',
   'border-c',
+  'border',
 ] as const
 
 function getPrefix(type: typeof colorType[number]) {
@@ -25,6 +26,7 @@ function getPrefix(type: typeof colorType[number]) {
     case 'bg':
     case 'background':
       return 'background-color'
+    case 'border':
     case 'border-c':
     case 'border-color':
       return 'border-color'
@@ -84,7 +86,7 @@ export default (config: Required<IScalpelOptions>) => {
     [
       // border color with not opacity
       new RegExp(
-        `^(?<type>border-c|border-color)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})$`
+        `^(?<type>border-c|border-color|border)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})$`
       ),
       handleColor,
       generatorLayer(940),
@@ -92,7 +94,7 @@ export default (config: Required<IScalpelOptions>) => {
     [
       // border color with opacity
       new RegExp(
-        `^(?<type>border-c|border-color)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})-(?<opacity>1|([1-9]\\d?))$`
+        `^(?<type>border-c|border-color|border)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})-(?<opacity>1|([1-9]\\d?))$`
       ),
       handleColor,
       generatorLayer(950),
