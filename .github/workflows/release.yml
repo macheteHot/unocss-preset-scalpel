@@ -25,16 +25,16 @@ jobs:
           registry-url: https://registry.npmjs.org/
           cache: 'pnpm'
 
-      - run: npx conventional-github-releaser -p angular
-        continue-on-error: true
-        env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.PROJECT_GITHUB_TOKEN}}
-
       - name: Install Dependencies
         run: pnpm install
 
       - name: PNPM build
         run: pnpm run build
+      
+      - run: npx conventional-github-releaser -p angular
+      continue-on-error: true
+      env:
+        CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{secrets.PROJECT_GITHUB_TOKEN}}
 
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks
