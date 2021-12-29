@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 440
  */
 
-export default () =>
+export const textAlignLast = () =>
   [
     [
       /^(text-align-last|text-last)-(?<value>auto|left|right|center|justify|start|end|initial|inherit)$/,

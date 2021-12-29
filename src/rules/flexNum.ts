@@ -5,7 +5,7 @@
 import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
-export default () =>
+export const flexNum = () =>
   [
     [
       /^flex-(?<value>null|auto|none|(0|[1-9]\d*))$/,

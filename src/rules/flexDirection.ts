@@ -5,7 +5,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 230
  */
 
-export default () =>
+export const flexDirection = () =>
   [
     [
       /^(flex-direction|flex)-(?<value>row|row-reverse|column|column-reverse)$/,

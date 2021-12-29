@@ -9,7 +9,7 @@ import {
   GAP_ENUM_STR,
 } from '../constant'
 
-export default () =>
+export const columnGap = () =>
   [
     [
       new RegExp(

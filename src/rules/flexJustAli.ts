@@ -5,7 +5,7 @@ import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 import { JUSTIFY_CONTENT_ENUM_STR, ALIGN_ITEMS_ENUM_STR } from '../constant'
 
-export default () =>
+export const flexJustAli = () =>
   [
     [
       new RegExp(

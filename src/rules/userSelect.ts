@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 430
  */
 
-export default () =>
+export const userSelect = () =>
   [
     [
       /^(user-)?select-(?<value>none|auto|text|all|contain|element)$/,

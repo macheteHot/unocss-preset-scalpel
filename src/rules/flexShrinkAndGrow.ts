@@ -3,7 +3,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
 /**
  * order 260-270
  */
-export default () =>
+export const flexShrinkAndGrow = () =>
   [
     [
       /^flex-(?<type>shrink)-(?<value>(0|[1-9]\d*)|initial|inherit)$/,

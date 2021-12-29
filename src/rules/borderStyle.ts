@@ -4,7 +4,7 @@
 import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
-export default () =>
+export const borderStyle = () =>
   [
     [
       /^border(-style)?-(?<value>none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit)$/,

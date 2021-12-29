@@ -15,7 +15,7 @@ const list = [
   'unset',
 ]
 
-export default () =>
+export const visibility = () =>
   [
     [
       new RegExp(`^visibility-(?<value>${toRegexStr(list)})$`),

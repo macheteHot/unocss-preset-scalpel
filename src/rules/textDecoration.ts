@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 420
  */
 
-export default () =>
+export const textDecoration = () =>
   [
     [
       /^(text-decoration|text)-(?<value>none|underline|overline|line-through|blink|inherit)$/,

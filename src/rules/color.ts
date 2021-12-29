@@ -48,7 +48,7 @@ function handleColor({ groups }: RegExpMatchArray) {
   return ConvertToCssObject([`${prefix}: ${newColor}`])
 }
 
-export default (config: Required<IScalpelOptions>) => {
+export const color = (config: Required<IScalpelOptions>) => {
   const colorKeysStr = Object.keys(config.colors).join('|')
   return [
     [

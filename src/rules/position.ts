@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 300
  */
 
-export default () =>
+export const position = () =>
   [
     [
       /^position-(?<value>static|relative|sticky|unset|absolute|fixed|inherit|initial)$/,

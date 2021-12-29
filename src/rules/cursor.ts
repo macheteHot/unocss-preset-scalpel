@@ -5,7 +5,7 @@ import type { Rule } from 'unocss'
 import { CURSOR_ENUM_STR } from '../constant'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
-export default () =>
+export const cursor = () =>
   [
     [
       new RegExp(`^cursor-(?<value>${CURSOR_ENUM_STR})$`),

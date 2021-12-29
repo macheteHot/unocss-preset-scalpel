@@ -5,7 +5,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  */
 import { JUSTIFY_CONTENT_ENUM_STR } from '../constant'
 
-export default () =>
+export const justifyContent = () =>
   [
     [
       new RegExp(`^justify-content-(?<justify>${JUSTIFY_CONTENT_ENUM_STR})$`),

@@ -47,7 +47,7 @@ function handleBorder({ groups }: RegExpMatchArray) {
   return ConvertToCssObject(getCss(direction, getUnitAndNum(unit, num)))
 }
 
-export default () =>
+export const border = () =>
   [
     [
       new RegExp(

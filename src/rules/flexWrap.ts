@@ -3,7 +3,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
 /**
  * order 240
  */
-export default () =>
+export const flexWrap = () =>
   [
     [
       /^flex(-wrap)?-(?<value>inherit|initial|nowrap|wrap|wrap-reverse)$/,

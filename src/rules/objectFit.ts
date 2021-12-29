@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order Infinity
  */
 
-export default () =>
+export const objectFit = () =>
   [
     [
       /^(object-fit)-(?<value>fill|contain|cover|none|scale-down|inherit|initial|revert|unset)$/,

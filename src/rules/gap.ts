@@ -9,7 +9,7 @@ import {
   UNIT_ENUM_STR,
 } from '../constant'
 
-export default () =>
+export const gap = () =>
   [
     [
       new RegExp(

@@ -7,7 +7,7 @@ import { ALIGN_ITEMS_ENUM_STR } from '../constant'
 
 import { ConvertToCssObject, generatorLayer } from '../utils'
 
-export default () =>
+export const alignItems = () =>
   [
     [
       new RegExp(`^align-items-(?<align>${ALIGN_ITEMS_ENUM_STR})$`),

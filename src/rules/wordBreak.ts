@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 350
  */
 
-export default () =>
+export const wordBreak = () =>
   [
     [
       /^word-break-(?<value>normal|break-all|keep-all|break-word|inherit|initial|unset)$/,

@@ -5,7 +5,7 @@ import type { Rule } from 'unocss'
 import { ConvertToCssObject, generatorLayer } from '../utils'
 import { DISPLAY_STR } from '../constant'
 
-export default () =>
+export const display = () =>
   [
     [
       new RegExp(`^(display|d)-(?<value>${DISPLAY_STR})`),

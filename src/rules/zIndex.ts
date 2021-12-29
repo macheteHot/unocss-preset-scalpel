@@ -3,7 +3,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
 /**
  * order 190
  */
-export default () =>
+export const zIndex = () =>
   [
     [
       /^z-index-(?<isMinus>m-)?(?<value>0|[1-9]\d*)$/,

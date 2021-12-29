@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 450
  */
 
-export default () =>
+export const textEllipsis = () =>
   [
     [
       /^(text-)?ellipsis(-(?<value>[1-9]\d*))?$/,

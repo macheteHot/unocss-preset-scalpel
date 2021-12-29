@@ -4,7 +4,7 @@ import { ConvertToCssObject, generatorLayer } from '../utils'
  * order 320
  */
 
-export default () =>
+export const textAlign = () =>
   [
     [
       /^(text-align|text)-(?<value>start|end|left|right|center|justify|match-parent)$/,

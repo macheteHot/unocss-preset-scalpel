@@ -9,7 +9,7 @@ import {
   NONNEGATIVE_NUMBER_REGEX_STR,
 } from '../constant'
 
-export default () =>
+export const verticalAlign = () =>
   [
     [
       new RegExp(

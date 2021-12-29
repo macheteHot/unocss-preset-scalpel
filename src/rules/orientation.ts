@@ -9,7 +9,7 @@ import {
   DIRECTION_MAP,
 } from '../constant'
 
-export default () =>
+export const orientation = () =>
   [
     [
       new RegExp(
