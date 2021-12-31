@@ -22,19 +22,9 @@ const getOrder = (direction?: IDirection) => getDirectionOrder(460, direction)
 function getCss(direction: IDirection | undefined, value: string) {
   return DIRECTION_MAP.get(direction)!.reduce((t: string[], c: string) => {
     if (c) {
-      return [
-        ...t,
-        `border-${c}-width: ${value}`,
-        `border-${c}-style: solid`,
-        `border-${c}-color: rgba(0,0,0,1)`,
-      ]
+      return [...t, `border-${c}-width: ${value}`]
     }
-    return [
-      ...t,
-      `border-width: ${value}`,
-      'border-style: solid',
-      'border-color: rgba(0,0,0,1)',
-    ]
+    return [...t, `border-width: ${value}`]
   }, [])
 }
 

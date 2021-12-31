@@ -229,8 +229,6 @@ config object like this
   > set border with direction  
   > use <code>border</code> or <code>border-w</code> or <code>border-width</code>
 
-  > for visualization default has <code>border-style: solid</code> and <code>border-color: rgba(0,0,0,1)</code>
-
   | Class            | Properties                                         |
   | :--------------- | :------------------------------------------------- |
   | border-1         | border-width:1px                                   |
