@@ -21,7 +21,7 @@ export const visibility = () =>
       new RegExp(`^visibility-(?<value>${toRegexStr(list)})$`),
       ({ groups }) => {
         const { value } = groups as { value: string }
-        return ConvertToCssObject([`visibility-${value}: ${value}`])
+        return ConvertToCssObject([`visibility: ${value}`])
       },
       generatorLayer(590),
     ],
