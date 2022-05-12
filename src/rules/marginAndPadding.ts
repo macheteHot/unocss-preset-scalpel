@@ -39,7 +39,13 @@ export const marginAndPadding = () =>
         }
         return ConvertToCssObject([`margin:${value}`])
       },
-      generatorLayer(getDirectionOrder(50)),
+      {
+        ...generatorLayer(getDirectionOrder(50)),
+        autocomplete: [
+          `(m|margin)-auto`,
+          `(m|margin)-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+        ],
+      },
     ],
     [
       // margin for xy direction
@@ -70,7 +76,13 @@ export const marginAndPadding = () =>
           )
         )
       },
-      generatorLayer(getDirectionOrder(50, 'x')),
+      {
+        ...generatorLayer(getDirectionOrder(50, 'x')),
+        autocomplete: [
+          `(m|margin)-(x|y)-auto`,
+          `(m|margin)-(x|y)-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+        ],
+      },
     ],
     [
       // margin for single direction
@@ -101,7 +113,13 @@ export const marginAndPadding = () =>
           )
         )
       },
-      generatorLayer(getDirectionOrder(50, 't')),
+      {
+        ...generatorLayer(getDirectionOrder(50, 't')),
+        autocomplete: [
+          `(m|margin)-(t|b|r|l)-auto`,
+          `(m|margin)-(t|b|r|l)-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+        ],
+      },
     ],
 
     // -------------------------------------------------- padding --------------------------------------------------
@@ -128,7 +146,13 @@ export const marginAndPadding = () =>
         }
         return ConvertToCssObject([`padding:${value}`])
       },
-      generatorLayer(getDirectionOrder(110)),
+      {
+        ...generatorLayer(getDirectionOrder(110)),
+        autocomplete: [
+          `(p|padding)-auto`,
+          `(p|padding)-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+        ],
+      },
     ],
     [
       // padding for xy direction
@@ -159,7 +183,13 @@ export const marginAndPadding = () =>
           )
         )
       },
-      generatorLayer(getDirectionOrder(110, 'x')),
+      {
+        ...generatorLayer(getDirectionOrder(110, 'x')),
+        autocomplete: [
+          `(p|padding)-(x|y)-auto`,
+          `(p|padding)-(x|y)-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+        ],
+      },
     ],
     [
       // padding for single direction
@@ -190,6 +220,12 @@ export const marginAndPadding = () =>
           )
         )
       },
-      generatorLayer(getDirectionOrder(110, 't')),
+      {
+        ...generatorLayer(getDirectionOrder(110, 't')),
+        autocomplete: [
+          `(p|padding)-(t|b|r|l)-auto`,
+          `(p|padding)-(t|b|r|l)-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+        ],
+      },
     ],
   ] as Rule[]

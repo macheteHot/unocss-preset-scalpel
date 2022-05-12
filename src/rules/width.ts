@@ -15,6 +15,9 @@ export const width = () =>
         const { num, unit } = groups as { num: string; unit?: string }
         return ConvertToCssObject([`width: ${getUnitAndNum(unit, num)}`])
       },
-      generatorLayer(10),
+      {
+        ...generatorLayer(10),
+        autocomplete: `(w|width)-<num>(${UNIT_ENUM_STR}|)`,
+      },
     ],
   ] as Rule[]

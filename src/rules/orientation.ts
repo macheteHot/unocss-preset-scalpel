@@ -32,6 +32,9 @@ export const orientation = () =>
           `${newDirection}: ${getUnitAndNum(unit, newNum)}`,
         ])
       },
-      generatorLayer(310),
+      {
+        ...generatorLayer(310),
+        autocomplete: `(t|r|b|l|top|right|bottom|left)-(m-|)<num>(${UNIT_ENUM_STR})`,
+      },
     ],
   ] as Rule[]

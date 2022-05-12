@@ -23,6 +23,9 @@ export const visibility = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`visibility: ${value}`])
       },
-      generatorLayer(590),
+      {
+        ...generatorLayer(590),
+        autocomplete: `visibility-(${toRegexStr(list)})`,
+      },
     ],
   ] as Rule[]

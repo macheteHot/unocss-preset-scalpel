@@ -13,6 +13,9 @@ export const justifyContent = () =>
         const { justify } = groups as { justify: string }
         return ConvertToCssObject([`justify-content: ${justify}`])
       },
-      generatorLayer(210),
+      {
+        ...generatorLayer(210),
+        autocomplete: `justify-content-(${JUSTIFY_CONTENT_ENUM_STR})`,
+      },
     ],
   ] as Rule[]

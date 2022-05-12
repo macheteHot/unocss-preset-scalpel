@@ -18,6 +18,9 @@ export const square = () =>
           `height: ${getUnitAndNum(unit, num)}`,
         ])
       },
-      generatorLayer(50),
+      {
+        ...generatorLayer(50),
+        autocomplete: `square-<num>(${UNIT_ENUM_STR}|)`,
+      },
     ],
   ] as Rule[]

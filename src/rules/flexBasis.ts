@@ -20,6 +20,12 @@ export const flexBasis = () =>
         const newValue = num ? getUnitAndNum(unit, num) : value
         return ConvertToCssObject([`flex-basis: ${newValue}`])
       },
-      generatorLayer(280),
+      {
+        ...generatorLayer(280),
+        autocomplete: [
+          `flex-basis-<num>(${UNIT_ENUM_STR}|)`,
+          `flex-basis-(initial|inherit|auto)`,
+        ],
+      },
     ],
   ] as Rule[]

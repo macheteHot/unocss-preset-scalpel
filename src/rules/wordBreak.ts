@@ -12,6 +12,10 @@ export const wordBreak = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`word-break: ${value}`])
       },
-      generatorLayer(350),
+      {
+        ...generatorLayer(350),
+        autocomplete:
+          'word-break-(normal|break-all|keep-all|break-word|inherit|initial|unset)',
+      },
     ],
   ] as Rule[]

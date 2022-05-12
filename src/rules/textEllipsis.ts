@@ -28,6 +28,9 @@ export const textEllipsis = () =>
           '-webkit-box-orient: vertical',
         ])
       },
-      generatorLayer(450),
+      {
+        ...generatorLayer(450),
+        autocomplete: ['(text-|)ellipsis-<num>'],
+      },
     ],
   ] as Rule[]

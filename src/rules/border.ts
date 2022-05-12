@@ -44,20 +44,29 @@ export const border = () =>
         `^(border|border-width|border-w)-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
       ),
       handleBorder,
-      generatorLayer(getOrder()),
+      {
+        ...generatorLayer(getOrder()),
+        autocomplete: `(border|border-width|border-w)-<num>(${UNIT_ENUM_STR}|)`,
+      },
     ],
     [
       new RegExp(
         `^(border|border-width|border-w)-(?<direction>[xy])-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
       ),
       handleBorder,
-      generatorLayer(getOrder('x')),
+      {
+        ...generatorLayer(getOrder('x')),
+        autocomplete: `(border|border-width|border-w)-(x|y)-<num>(${UNIT_ENUM_STR}|)`,
+      },
     ],
     [
       new RegExp(
         `^(border|border-width|border-w)-(?<direction>[trbl])-(?<num>${NONNEGATIVE_NUMBER_REGEX_STR})(?<unit>${UNIT_ENUM_STR})?$`
       ),
       handleBorder,
-      generatorLayer(getOrder('t')),
+      {
+        ...generatorLayer(getOrder('t')),
+        autocomplete: `(border|border-width|border-w)-(t|r|b|l)-<num>(${UNIT_ENUM_STR}|)`,
+      },
     ],
   ] as Rule[]

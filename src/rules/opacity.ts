@@ -13,6 +13,9 @@ export const opacity = () =>
           `opacity: ${Number((Number(value) / 100).toFixed(2))}`,
         ])
       },
-      generatorLayer(99998),
+      {
+        ...generatorLayer(99998),
+        autocomplete: 'opacity-<num>',
+      },
     ],
   ] as Rule[]

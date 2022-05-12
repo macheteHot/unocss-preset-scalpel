@@ -24,6 +24,12 @@ export const verticalAlign = () =>
         const newValue = num ? `${getUnitAndNum(unit, num)}` : value
         return ConvertToCssObject([`vertical-align: ${newValue}`])
       },
-      generatorLayer(570),
+      {
+        ...generatorLayer(570),
+        autocomplete: [
+          `vertical-align-<num>(${UNIT_ENUM_STR}|)`,
+          `vertical-align-(${VERTICAL_ALIGN_STR})`,
+        ],
+      },
     ],
   ] as Rule[]

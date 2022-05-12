@@ -13,6 +13,10 @@ export const flexDirection = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`flex-direction: ${value}`])
       },
-      generatorLayer(230),
+      {
+        ...generatorLayer(230),
+        autocomplete:
+          '(flex-direction|flex)-(row|row-reverse|column|column-reverse)',
+      },
     ],
   ] as Rule[]

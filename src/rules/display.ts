@@ -13,6 +13,9 @@ export const display = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`display: ${value}`])
       },
-      generatorLayer(290),
+      {
+        ...generatorLayer(290),
+        autocomplete: [`display-(${DISPLAY_STR})`, `d-(${DISPLAY_STR})`],
+      },
     ],
   ] as Rule[]

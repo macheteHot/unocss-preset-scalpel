@@ -11,6 +11,9 @@ export const flexWrap = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`flex-wrap: ${value}`])
       },
-      generatorLayer(240),
+      {
+        ...generatorLayer(240),
+        autocomplete: 'flex(-wrap|)-(inherit|initial|nowrap|wrap|wrap-reverse)',
+      },
     ],
   ] as Rule[]

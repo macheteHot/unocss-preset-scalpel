@@ -27,6 +27,9 @@ export const gap = () =>
           `row-gap: ${newValue}`,
         ])
       },
-      generatorLayer(580),
+      {
+        ...generatorLayer(580),
+        autocomplete: [`gap-<num>(${UNIT_ENUM_STR}|)`, `gap-(${GAP_ENUM_STR})`],
+      },
     ],
   ] as Rule[]

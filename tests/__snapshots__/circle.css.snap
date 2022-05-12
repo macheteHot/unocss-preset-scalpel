@@ -1,16 +1,62 @@
 /* layer: 00540 */
-.active\:circle:active,.any-link\:circle:any-link,.blank\:circle:blank,.checked\:circle:checked,.circle,.current\:circle:current,.default\:circle:default,.defined\:circle:defined,.disabled\:circle:disabled,.drop\:circle:drop,.empty\:circle:empty,.enabled\:circle:enabled,.first-child\:circle:first-child,.first-of-type\:circle:first-of-type,.first\:circle:first,.focus-visible\:circle:focus-visible,.focus-within\:circle:focus-within,.focus\:circle:focus,.fullscreen\:circle:fullscreen,.future\:circle:future,.host\:circle:host,.hover\:circle:hover,.in-range\:circle:in-range,.indeterminate\:circle:indeterminate,.invalid\:circle:invalid,.last-child\:circle:last-child,.last-of-type\:circle:last-of-type,.left\:circle:left,.link\:circle:link,.local-link\:circle:local-link,.only-child\:circle:only-child,.only-of-type\:circle:only-of-type,.optional\:circle:optional,.out-of-range\:circle:out-of-range,.past\:circle:past,.placeholder-shown\:circle:placeholder-shown,.read-only\:circle:read-only,.read-write\:circle:read-write,.required\:circle:required,.right\:circle:right,.root\:circle:root,.scope\:circle:scope,.target-within\:circle:target-within,.target\:circle:target,.user-invalid\:circle:user-invalid,.valid\:circle:valid,.visited\:circle:visited{border-radius: 50% !important;}
-@media (min-width: 640px){
-.sm\@circle{border-radius: 50% !important;}
-}
-@media (min-width: 768px){
-.md\@circle{border-radius: 50% !important;}
-}
+.active\:circle:active,
+.any-link\:circle:any-link,
+.blank\:circle:blank,
+.checked\:circle:checked,
+.circle,
+.current\:circle:current,
+.default\:circle:default,
+.defined\:circle:defined,
+.disabled\:circle:disabled,
+.drop\:circle:drop,
+.empty\:circle:empty,
+.enabled\:circle:enabled,
+.first-child\:circle:first-child,
+.first-of-type\:circle:first-of-type,
+.first\:circle:first,
+.focus-visible\:circle:focus-visible,
+.focus-within\:circle:focus-within,
+.focus\:circle:focus,
+.fullscreen\:circle:fullscreen,
+.future\:circle:future,
+.host\:circle:host,
+.hover\:circle:hover,
+.in-range\:circle:in-range,
+.indeterminate\:circle:indeterminate,
+.invalid\:circle:invalid,
+.last-child\:circle:last-child,
+.last-of-type\:circle:last-of-type,
+.left\:circle:left,
+.link\:circle:link,
+.local-link\:circle:local-link,
+.only-child\:circle:only-child,
+.only-of-type\:circle:only-of-type,
+.optional\:circle:optional,
+.out-of-range\:circle:out-of-range,
+.past\:circle:past,
+.placeholder-shown\:circle:placeholder-shown,
+.read-only\:circle:read-only,
+.read-write\:circle:read-write,
+.required\:circle:required,
+.right\:circle:right,
+.root\:circle:root,
+.scope\:circle:scope,
+.target-within\:circle:target-within,
+.target\:circle:target,
+.user-invalid\:circle:user-invalid,
+.valid\:circle:valid,
+.visited\:circle:visited{border-radius: 50% !important;}
 @media (min-width: 1024px){
 .lg\@circle{border-radius: 50% !important;}
 }
 @media (min-width: 1280px){
 .xl\@circle{border-radius: 50% !important;}
+}
+@media (min-width: 640px){
+.sm\@circle{border-radius: 50% !important;}
+}
+@media (min-width: 768px){
+.md\@circle{border-radius: 50% !important;}
 }
 @supports (display: grid){
 .supportGrid\@circle{border-radius: 50% !important;}

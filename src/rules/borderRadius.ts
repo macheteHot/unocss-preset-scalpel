@@ -15,6 +15,12 @@ export const borderRadius = () =>
         const { num, unit } = groups as { num: string; unit?: string }
         return ConvertToCssObject([`border-radius:${getUnitAndNum(unit, num)}`])
       },
-      generatorLayer(530),
+      {
+        ...generatorLayer(530),
+        autocomplete: [
+          `(border-radius|br)-<num>`,
+          `(border-radius|br)-<num>-(${UNIT_ENUM_STR})`,
+        ],
+      },
     ],
   ] as Rule[]

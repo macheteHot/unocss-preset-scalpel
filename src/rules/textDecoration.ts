@@ -12,6 +12,10 @@ export const textDecoration = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`text-decoration: ${value}`])
       },
-      generatorLayer(420),
+      {
+        ...generatorLayer(420),
+        autocomplete:
+          '(text-decoration|text)-(none|underline|overline|line-through|blink|inherit)',
+      },
     ],
   ] as Rule[]

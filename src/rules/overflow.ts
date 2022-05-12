@@ -24,6 +24,9 @@ export const overflow = () =>
             return assertUnreachable(direction)
         }
       },
-      generatorLayer(380),
+      {
+        ...generatorLayer(380),
+        autocomplete: `overflow(-x|-y|)-(hidden|auto|visible|scroll|inherit)`,
+      },
     ],
   ] as Rule[]

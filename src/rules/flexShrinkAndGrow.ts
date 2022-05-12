@@ -11,7 +11,10 @@ export const flexShrinkAndGrow = () =>
         const { type, value } = groups as { type: string; value: string }
         return ConvertToCssObject([`flex-${type}: ${value}`])
       },
-      generatorLayer(260),
+      {
+        ...generatorLayer(260),
+        autocomplete: ['flex-shrink-<num>', 'flex-shrink-(initial|inherit)'],
+      },
     ],
     [
       /^flex-(?<type>grow)-(?<value>(0|[1-9]\d*)|initial|inherit)$/,
@@ -19,6 +22,9 @@ export const flexShrinkAndGrow = () =>
         const { type, value } = groups as { type: string; value: string }
         return ConvertToCssObject([`flex-${type}: ${value}`])
       },
-      generatorLayer(270),
+      {
+        ...generatorLayer(270),
+        autocomplete: ['flex-grow-<num>', 'flex-grow-(initial|inherit)'],
+      },
     ],
   ] as Rule[]

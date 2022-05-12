@@ -9,6 +9,9 @@ export const circle = () =>
     [
       /^circle$/,
       () => ConvertToCssObject(['border-radius: 50%']),
-      generatorLayer(540),
+      {
+        ...generatorLayer(540),
+        autocomplete: 'circle',
+      },
     ],
   ] as Rule[]

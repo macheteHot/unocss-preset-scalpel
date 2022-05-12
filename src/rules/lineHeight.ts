@@ -20,6 +20,12 @@ export const lineHeight = () =>
         const newValue = num ? `${getUnitAndNum(unit, num)}` : value
         return ConvertToCssObject([`line-height: ${newValue}`])
       },
-      generatorLayer(330),
+      {
+        ...generatorLayer(330),
+        autocomplete: [
+          `(lh|line-height)-<num>(${UNIT_ENUM_STR}|)`,
+          `(lh|line-height)-(normal|unset|inherit|initial)`,
+        ],
+      },
     ],
   ] as Rule[]

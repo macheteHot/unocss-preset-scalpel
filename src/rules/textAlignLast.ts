@@ -12,6 +12,10 @@ export const textAlignLast = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`text-align-last: ${value}`])
       },
-      generatorLayer(440),
+      {
+        ...generatorLayer(440),
+        autocomplete:
+          '(text-align-last|text-last)-(auto|left|right|center|justify|start|end|initial|inherit)',
+      },
     ],
   ] as Rule[]

@@ -32,6 +32,9 @@ export const flexJustAli = () =>
           `align-items: ${align}`,
         ])
       },
-      generatorLayer(200),
+      {
+        ...generatorLayer(200),
+        autocomplete: `flex-(${JUSTIFY_CONTENT_ENUM_STR})-(${ALIGN_ITEMS_ENUM_STR})`,
+      },
     ],
   ] as Rule[]

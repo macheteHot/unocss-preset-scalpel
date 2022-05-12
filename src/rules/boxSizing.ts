@@ -12,6 +12,9 @@ export const boxSizing = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`box-sizing: ${value}`])
       },
-      generatorLayer(560),
+      {
+        ...generatorLayer(560),
+        autocomplete: `box-sizing-(content-box|border-box)`,
+      },
     ],
   ] as Rule[]

@@ -1,14 +1,98 @@
 /* layer: 00560 */
-.active\:box-sizing-border-box:active,.any-link\:box-sizing-border-box:any-link,.blank\:box-sizing-border-box:blank,.box-sizing-border-box,.checked\:box-sizing-border-box:checked,.current\:box-sizing-border-box:current,.default\:box-sizing-border-box:default,.defined\:box-sizing-border-box:defined,.disabled\:box-sizing-border-box:disabled,.drop\:box-sizing-border-box:drop,.empty\:box-sizing-border-box:empty,.enabled\:box-sizing-border-box:enabled,.first-child\:box-sizing-border-box:first-child,.first-of-type\:box-sizing-border-box:first-of-type,.first\:box-sizing-border-box:first,.focus-visible\:box-sizing-border-box:focus-visible,.focus-within\:box-sizing-border-box:focus-within,.focus\:box-sizing-border-box:focus,.fullscreen\:box-sizing-border-box:fullscreen,.future\:box-sizing-border-box:future,.host\:box-sizing-border-box:host,.hover\:box-sizing-border-box:hover,.in-range\:box-sizing-border-box:in-range,.indeterminate\:box-sizing-border-box:indeterminate,.invalid\:box-sizing-border-box:invalid,.last-child\:box-sizing-border-box:last-child,.last-of-type\:box-sizing-border-box:last-of-type,.left\:box-sizing-border-box:left,.link\:box-sizing-border-box:link,.local-link\:box-sizing-border-box:local-link,.only-child\:box-sizing-border-box:only-child,.only-of-type\:box-sizing-border-box:only-of-type,.optional\:box-sizing-border-box:optional,.out-of-range\:box-sizing-border-box:out-of-range,.past\:box-sizing-border-box:past,.placeholder-shown\:box-sizing-border-box:placeholder-shown,.read-only\:box-sizing-border-box:read-only,.read-write\:box-sizing-border-box:read-write,.required\:box-sizing-border-box:required,.right\:box-sizing-border-box:right,.root\:box-sizing-border-box:root,.scope\:box-sizing-border-box:scope,.target-within\:box-sizing-border-box:target-within,.target\:box-sizing-border-box:target,.user-invalid\:box-sizing-border-box:user-invalid,.valid\:box-sizing-border-box:valid,.visited\:box-sizing-border-box:visited{box-sizing: border-box !important;}
-.active\:box-sizing-content-box:active,.any-link\:box-sizing-content-box:any-link,.blank\:box-sizing-content-box:blank,.box-sizing-content-box,.checked\:box-sizing-content-box:checked,.current\:box-sizing-content-box:current,.default\:box-sizing-content-box:default,.defined\:box-sizing-content-box:defined,.disabled\:box-sizing-content-box:disabled,.drop\:box-sizing-content-box:drop,.empty\:box-sizing-content-box:empty,.enabled\:box-sizing-content-box:enabled,.first-child\:box-sizing-content-box:first-child,.first-of-type\:box-sizing-content-box:first-of-type,.first\:box-sizing-content-box:first,.focus-visible\:box-sizing-content-box:focus-visible,.focus-within\:box-sizing-content-box:focus-within,.focus\:box-sizing-content-box:focus,.fullscreen\:box-sizing-content-box:fullscreen,.future\:box-sizing-content-box:future,.host\:box-sizing-content-box:host,.hover\:box-sizing-content-box:hover,.in-range\:box-sizing-content-box:in-range,.indeterminate\:box-sizing-content-box:indeterminate,.invalid\:box-sizing-content-box:invalid,.last-child\:box-sizing-content-box:last-child,.last-of-type\:box-sizing-content-box:last-of-type,.left\:box-sizing-content-box:left,.link\:box-sizing-content-box:link,.local-link\:box-sizing-content-box:local-link,.only-child\:box-sizing-content-box:only-child,.only-of-type\:box-sizing-content-box:only-of-type,.optional\:box-sizing-content-box:optional,.out-of-range\:box-sizing-content-box:out-of-range,.past\:box-sizing-content-box:past,.placeholder-shown\:box-sizing-content-box:placeholder-shown,.read-only\:box-sizing-content-box:read-only,.read-write\:box-sizing-content-box:read-write,.required\:box-sizing-content-box:required,.right\:box-sizing-content-box:right,.root\:box-sizing-content-box:root,.scope\:box-sizing-content-box:scope,.target-within\:box-sizing-content-box:target-within,.target\:box-sizing-content-box:target,.user-invalid\:box-sizing-content-box:user-invalid,.valid\:box-sizing-content-box:valid,.visited\:box-sizing-content-box:visited{box-sizing: content-box !important;}
-@media (min-width: 640px){
-.sm\@box-sizing-border-box{box-sizing: border-box !important;}
-.sm\@box-sizing-content-box{box-sizing: content-box !important;}
-}
-@media (min-width: 768px){
-.md\@box-sizing-border-box{box-sizing: border-box !important;}
-.md\@box-sizing-content-box{box-sizing: content-box !important;}
-}
+.active\:box-sizing-border-box:active,
+.any-link\:box-sizing-border-box:any-link,
+.blank\:box-sizing-border-box:blank,
+.box-sizing-border-box,
+.checked\:box-sizing-border-box:checked,
+.current\:box-sizing-border-box:current,
+.default\:box-sizing-border-box:default,
+.defined\:box-sizing-border-box:defined,
+.disabled\:box-sizing-border-box:disabled,
+.drop\:box-sizing-border-box:drop,
+.empty\:box-sizing-border-box:empty,
+.enabled\:box-sizing-border-box:enabled,
+.first-child\:box-sizing-border-box:first-child,
+.first-of-type\:box-sizing-border-box:first-of-type,
+.first\:box-sizing-border-box:first,
+.focus-visible\:box-sizing-border-box:focus-visible,
+.focus-within\:box-sizing-border-box:focus-within,
+.focus\:box-sizing-border-box:focus,
+.fullscreen\:box-sizing-border-box:fullscreen,
+.future\:box-sizing-border-box:future,
+.host\:box-sizing-border-box:host,
+.hover\:box-sizing-border-box:hover,
+.in-range\:box-sizing-border-box:in-range,
+.indeterminate\:box-sizing-border-box:indeterminate,
+.invalid\:box-sizing-border-box:invalid,
+.last-child\:box-sizing-border-box:last-child,
+.last-of-type\:box-sizing-border-box:last-of-type,
+.left\:box-sizing-border-box:left,
+.link\:box-sizing-border-box:link,
+.local-link\:box-sizing-border-box:local-link,
+.only-child\:box-sizing-border-box:only-child,
+.only-of-type\:box-sizing-border-box:only-of-type,
+.optional\:box-sizing-border-box:optional,
+.out-of-range\:box-sizing-border-box:out-of-range,
+.past\:box-sizing-border-box:past,
+.placeholder-shown\:box-sizing-border-box:placeholder-shown,
+.read-only\:box-sizing-border-box:read-only,
+.read-write\:box-sizing-border-box:read-write,
+.required\:box-sizing-border-box:required,
+.right\:box-sizing-border-box:right,
+.root\:box-sizing-border-box:root,
+.scope\:box-sizing-border-box:scope,
+.target-within\:box-sizing-border-box:target-within,
+.target\:box-sizing-border-box:target,
+.user-invalid\:box-sizing-border-box:user-invalid,
+.valid\:box-sizing-border-box:valid,
+.visited\:box-sizing-border-box:visited{box-sizing: border-box !important;}
+.active\:box-sizing-content-box:active,
+.any-link\:box-sizing-content-box:any-link,
+.blank\:box-sizing-content-box:blank,
+.box-sizing-content-box,
+.checked\:box-sizing-content-box:checked,
+.current\:box-sizing-content-box:current,
+.default\:box-sizing-content-box:default,
+.defined\:box-sizing-content-box:defined,
+.disabled\:box-sizing-content-box:disabled,
+.drop\:box-sizing-content-box:drop,
+.empty\:box-sizing-content-box:empty,
+.enabled\:box-sizing-content-box:enabled,
+.first-child\:box-sizing-content-box:first-child,
+.first-of-type\:box-sizing-content-box:first-of-type,
+.first\:box-sizing-content-box:first,
+.focus-visible\:box-sizing-content-box:focus-visible,
+.focus-within\:box-sizing-content-box:focus-within,
+.focus\:box-sizing-content-box:focus,
+.fullscreen\:box-sizing-content-box:fullscreen,
+.future\:box-sizing-content-box:future,
+.host\:box-sizing-content-box:host,
+.hover\:box-sizing-content-box:hover,
+.in-range\:box-sizing-content-box:in-range,
+.indeterminate\:box-sizing-content-box:indeterminate,
+.invalid\:box-sizing-content-box:invalid,
+.last-child\:box-sizing-content-box:last-child,
+.last-of-type\:box-sizing-content-box:last-of-type,
+.left\:box-sizing-content-box:left,
+.link\:box-sizing-content-box:link,
+.local-link\:box-sizing-content-box:local-link,
+.only-child\:box-sizing-content-box:only-child,
+.only-of-type\:box-sizing-content-box:only-of-type,
+.optional\:box-sizing-content-box:optional,
+.out-of-range\:box-sizing-content-box:out-of-range,
+.past\:box-sizing-content-box:past,
+.placeholder-shown\:box-sizing-content-box:placeholder-shown,
+.read-only\:box-sizing-content-box:read-only,
+.read-write\:box-sizing-content-box:read-write,
+.required\:box-sizing-content-box:required,
+.right\:box-sizing-content-box:right,
+.root\:box-sizing-content-box:root,
+.scope\:box-sizing-content-box:scope,
+.target-within\:box-sizing-content-box:target-within,
+.target\:box-sizing-content-box:target,
+.user-invalid\:box-sizing-content-box:user-invalid,
+.valid\:box-sizing-content-box:valid,
+.visited\:box-sizing-content-box:visited{box-sizing: content-box !important;}
 @media (min-width: 1024px){
 .lg\@box-sizing-border-box{box-sizing: border-box !important;}
 .lg\@box-sizing-content-box{box-sizing: content-box !important;}
@@ -16,6 +100,14 @@
 @media (min-width: 1280px){
 .xl\@box-sizing-border-box{box-sizing: border-box !important;}
 .xl\@box-sizing-content-box{box-sizing: content-box !important;}
+}
+@media (min-width: 640px){
+.sm\@box-sizing-border-box{box-sizing: border-box !important;}
+.sm\@box-sizing-content-box{box-sizing: content-box !important;}
+}
+@media (min-width: 768px){
+.md\@box-sizing-border-box{box-sizing: border-box !important;}
+.md\@box-sizing-content-box{box-sizing: content-box !important;}
 }
 @supports (display: grid){
 .supportGrid\@box-sizing-border-box{box-sizing: border-box !important;}

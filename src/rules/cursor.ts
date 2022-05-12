@@ -13,6 +13,9 @@ export const cursor = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`cursor: ${value}`])
       },
-      generatorLayer(340),
+      {
+        ...generatorLayer(340),
+        autocomplete: `cursor-(${CURSOR_ENUM_STR})`,
+      },
     ],
   ] as Rule[]

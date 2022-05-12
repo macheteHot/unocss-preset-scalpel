@@ -12,6 +12,9 @@ export const userSelect = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`user-select: ${value}`])
       },
-      generatorLayer(430),
+      {
+        ...generatorLayer(430),
+        autocomplete: '(user-|)select-(none|auto|text|all|contain|element)',
+      },
     ],
   ] as Rule[]

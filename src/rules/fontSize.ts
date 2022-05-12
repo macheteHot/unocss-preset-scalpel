@@ -15,6 +15,9 @@ export const fontSize = () =>
         const { num, unit } = groups as { num: string; unit?: string }
         return ConvertToCssObject([`font-size: ${getUnitAndNum(unit, num)}`])
       },
-      generatorLayer(370),
+      {
+        ...generatorLayer(370),
+        autocomplete: `(font-size|fs)-(${NONNEGATIVE_NUMBER_REGEX_STR})(${UNIT_ENUM_STR}|)`,
+      },
     ],
   ] as Rule[]

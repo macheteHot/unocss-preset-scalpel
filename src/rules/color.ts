@@ -57,7 +57,10 @@ export const color = (config: Required<IScalpelOptions>) => {
         `^(?<type>color|c|text)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})$`
       ),
       handleColor,
-      generatorLayer(900),
+      {
+        ...generatorLayer(900),
+        autocomplete: '(color|c|text)-(red|blue|#F00|F00)',
+      },
     ],
     [
       // color  with opacity
@@ -65,7 +68,10 @@ export const color = (config: Required<IScalpelOptions>) => {
         `^(?<type>color|c|text)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})-(?<opacity>1|([1-9]\\d?))$`
       ),
       handleColor,
-      generatorLayer(910),
+      {
+        ...generatorLayer(910),
+        autocomplete: '(color|c|text)-(red|blue|#F00|F00)-<num>',
+      },
     ],
     [
       // background with not opacity
@@ -73,7 +79,10 @@ export const color = (config: Required<IScalpelOptions>) => {
         `^(?<type>bg|background)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})$`
       ),
       handleColor,
-      generatorLayer(920),
+      {
+        ...generatorLayer(920),
+        autocomplete: '(bg|background)-(red|blue|#F00|F00)',
+      },
     ],
     [
       // background with opacity
@@ -81,7 +90,10 @@ export const color = (config: Required<IScalpelOptions>) => {
         `^(?<type>bg|background)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})-(?<opacity>1|([1-9]\\d?))$`
       ),
       handleColor,
-      generatorLayer(930),
+      {
+        ...generatorLayer(930),
+        autocomplete: '(bg|background)-(red|blue|#F00|F00)-<num>',
+      },
     ],
     [
       // border color with not opacity
@@ -89,7 +101,10 @@ export const color = (config: Required<IScalpelOptions>) => {
         `^(?<type>border-c|border-color|border)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})$`
       ),
       handleColor,
-      generatorLayer(940),
+      {
+        ...generatorLayer(940),
+        autocomplete: '(border-c|border-color|border)-(red|blue|#F00|F00)',
+      },
     ],
     [
       // border color with opacity
@@ -97,7 +112,11 @@ export const color = (config: Required<IScalpelOptions>) => {
         `^(?<type>border-c|border-color|border)-(?<color>(#?([a-fA-F0-9]{8}$|[a-fA-F0-9]{6}|[a-fA-F0-9]{3}))|${colorKeysStr})-(?<opacity>1|([1-9]\\d?))$`
       ),
       handleColor,
-      generatorLayer(950),
+      {
+        ...generatorLayer(950),
+        autocomplete:
+          '(border-c|border-color|border)-(red|blue|#F00|F00)-<num>',
+      },
     ],
   ] as Rule[]
 }

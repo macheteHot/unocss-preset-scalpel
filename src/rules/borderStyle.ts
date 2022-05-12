@@ -12,6 +12,10 @@ export const borderStyle = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`border-style: ${value}`])
       },
-      generatorLayer(550),
+      {
+        ...generatorLayer(550),
+        autocomplete:
+          'border(-style|)-(none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit)',
+      },
     ],
   ] as Rule[]

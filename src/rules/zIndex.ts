@@ -12,6 +12,9 @@ export const zIndex = () =>
         const newValue = isMinus ? `-${value}` : `${value}`
         return ConvertToCssObject([`z-index: ${newValue}`])
       },
-      generatorLayer(190),
+      {
+        ...generatorLayer(190),
+        autocomplete: 'z-index-(m-|)<num>',
+      },
     ],
   ] as Rule[]

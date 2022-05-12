@@ -24,6 +24,12 @@ export const rowGap = () =>
         const newValue = value || getUnitAndNum(unit, num)
         return ConvertToCssObject([`row-gap: ${newValue}`])
       },
-      generatorLayer(581),
+      {
+        ...generatorLayer(581),
+        autocomplete: [
+          `r(ow|)-gap-<num>(${UNIT_ENUM_STR})`,
+          `r(ow|)-gap-(${GAP_ENUM_STR})`,
+        ],
+      },
     ],
   ] as Rule[]

@@ -11,6 +11,9 @@ export const fontWeight = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`font-weight: ${value}`])
       },
-      generatorLayer(360),
+      {
+        ...generatorLayer(360),
+        autocomplete: `(font-weight|fw)-(100|200|300|400|500|600|700|800|900||bold|bolder|inherit|initial|lighter|normal|unset)`,
+      },
     ],
   ] as Rule[]

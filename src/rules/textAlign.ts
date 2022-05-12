@@ -12,6 +12,10 @@ export const textAlign = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`text-align: ${value}`])
       },
-      generatorLayer(320),
+      {
+        ...generatorLayer(320),
+        autocomplete:
+          '(text-align|text)-(start|end|left|right|center|justify|match-parent)',
+      },
     ],
   ] as Rule[]

@@ -23,6 +23,9 @@ export const letterSpacing = () =>
           `letter-spacing: ${getUnitAndNum(unit, newNum)}`,
         ])
       },
-      generatorLayer(410),
+      {
+        ...generatorLayer(410),
+        autocomplete: `letter-spacing-(m-|)<num>(${UNIT_ENUM_STR}|)`,
+      },
     ],
   ] as Rule[]

@@ -15,6 +15,9 @@ export const alignItems = () =>
         const { align } = groups as { align: string }
         return ConvertToCssObject([`align-items: ${align}`])
       },
-      generatorLayer(220),
+      {
+        ...generatorLayer(220),
+        autocomplete: `align-items-(${ALIGN_ITEMS_ENUM_STR})`,
+      },
     ],
   ] as Rule[]

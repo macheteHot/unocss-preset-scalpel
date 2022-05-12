@@ -1,39 +1,281 @@
 /* layer: 00450 */
-.active\:ellipsis-123:active,.active\:text-ellipsis-123:active,.any-link\:ellipsis-123:any-link,.any-link\:text-ellipsis-123:any-link,.blank\:ellipsis-123:blank,.blank\:text-ellipsis-123:blank,.checked\:ellipsis-123:checked,.checked\:text-ellipsis-123:checked,.current\:ellipsis-123:current,.current\:text-ellipsis-123:current,.default\:ellipsis-123:default,.default\:text-ellipsis-123:default,.defined\:ellipsis-123:defined,.defined\:text-ellipsis-123:defined,.disabled\:ellipsis-123:disabled,.disabled\:text-ellipsis-123:disabled,.drop\:ellipsis-123:drop,.drop\:text-ellipsis-123:drop,.ellipsis-123,.empty\:ellipsis-123:empty,.empty\:text-ellipsis-123:empty,.enabled\:ellipsis-123:enabled,.enabled\:text-ellipsis-123:enabled,.first-child\:ellipsis-123:first-child,.first-child\:text-ellipsis-123:first-child,.first-of-type\:ellipsis-123:first-of-type,.first-of-type\:text-ellipsis-123:first-of-type,.first\:ellipsis-123:first,.first\:text-ellipsis-123:first,.focus-visible\:ellipsis-123:focus-visible,.focus-visible\:text-ellipsis-123:focus-visible,.focus-within\:ellipsis-123:focus-within,.focus-within\:text-ellipsis-123:focus-within,.focus\:ellipsis-123:focus,.focus\:text-ellipsis-123:focus,.fullscreen\:ellipsis-123:fullscreen,.fullscreen\:text-ellipsis-123:fullscreen,.future\:ellipsis-123:future,.future\:text-ellipsis-123:future,.host\:ellipsis-123:host,.host\:text-ellipsis-123:host,.hover\:ellipsis-123:hover,.hover\:text-ellipsis-123:hover,.in-range\:ellipsis-123:in-range,.in-range\:text-ellipsis-123:in-range,.indeterminate\:ellipsis-123:indeterminate,.indeterminate\:text-ellipsis-123:indeterminate,.invalid\:ellipsis-123:invalid,.invalid\:text-ellipsis-123:invalid,.last-child\:ellipsis-123:last-child,.last-child\:text-ellipsis-123:last-child,.last-of-type\:ellipsis-123:last-of-type,.last-of-type\:text-ellipsis-123:last-of-type,.left\:ellipsis-123:left,.left\:text-ellipsis-123:left,.link\:ellipsis-123:link,.link\:text-ellipsis-123:link,.local-link\:ellipsis-123:local-link,.local-link\:text-ellipsis-123:local-link,.only-child\:ellipsis-123:only-child,.only-child\:text-ellipsis-123:only-child,.only-of-type\:ellipsis-123:only-of-type,.only-of-type\:text-ellipsis-123:only-of-type,.optional\:ellipsis-123:optional,.optional\:text-ellipsis-123:optional,.out-of-range\:ellipsis-123:out-of-range,.out-of-range\:text-ellipsis-123:out-of-range,.past\:ellipsis-123:past,.past\:text-ellipsis-123:past,.placeholder-shown\:ellipsis-123:placeholder-shown,.placeholder-shown\:text-ellipsis-123:placeholder-shown,.read-only\:ellipsis-123:read-only,.read-only\:text-ellipsis-123:read-only,.read-write\:ellipsis-123:read-write,.read-write\:text-ellipsis-123:read-write,.required\:ellipsis-123:required,.required\:text-ellipsis-123:required,.right\:ellipsis-123:right,.right\:text-ellipsis-123:right,.root\:ellipsis-123:root,.root\:text-ellipsis-123:root,.scope\:ellipsis-123:scope,.scope\:text-ellipsis-123:scope,.target-within\:ellipsis-123:target-within,.target-within\:text-ellipsis-123:target-within,.target\:ellipsis-123:target,.target\:text-ellipsis-123:target,.text-ellipsis-123,.user-invalid\:ellipsis-123:user-invalid,.user-invalid\:text-ellipsis-123:user-invalid,.valid\:ellipsis-123:valid,.valid\:text-ellipsis-123:valid,.visited\:ellipsis-123:visited,.visited\:text-ellipsis-123:visited{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
-.active\:ellipsis-999999999:active,.active\:text-ellipsis-999999999:active,.any-link\:ellipsis-999999999:any-link,.any-link\:text-ellipsis-999999999:any-link,.blank\:ellipsis-999999999:blank,.blank\:text-ellipsis-999999999:blank,.checked\:ellipsis-999999999:checked,.checked\:text-ellipsis-999999999:checked,.current\:ellipsis-999999999:current,.current\:text-ellipsis-999999999:current,.default\:ellipsis-999999999:default,.default\:text-ellipsis-999999999:default,.defined\:ellipsis-999999999:defined,.defined\:text-ellipsis-999999999:defined,.disabled\:ellipsis-999999999:disabled,.disabled\:text-ellipsis-999999999:disabled,.drop\:ellipsis-999999999:drop,.drop\:text-ellipsis-999999999:drop,.ellipsis-999999999,.empty\:ellipsis-999999999:empty,.empty\:text-ellipsis-999999999:empty,.enabled\:ellipsis-999999999:enabled,.enabled\:text-ellipsis-999999999:enabled,.first-child\:ellipsis-999999999:first-child,.first-child\:text-ellipsis-999999999:first-child,.first-of-type\:ellipsis-999999999:first-of-type,.first-of-type\:text-ellipsis-999999999:first-of-type,.first\:ellipsis-999999999:first,.first\:text-ellipsis-999999999:first,.focus-visible\:ellipsis-999999999:focus-visible,.focus-visible\:text-ellipsis-999999999:focus-visible,.focus-within\:ellipsis-999999999:focus-within,.focus-within\:text-ellipsis-999999999:focus-within,.focus\:ellipsis-999999999:focus,.focus\:text-ellipsis-999999999:focus,.fullscreen\:ellipsis-999999999:fullscreen,.fullscreen\:text-ellipsis-999999999:fullscreen,.future\:ellipsis-999999999:future,.future\:text-ellipsis-999999999:future,.host\:ellipsis-999999999:host,.host\:text-ellipsis-999999999:host,.hover\:ellipsis-999999999:hover,.hover\:text-ellipsis-999999999:hover,.in-range\:ellipsis-999999999:in-range,.in-range\:text-ellipsis-999999999:in-range,.indeterminate\:ellipsis-999999999:indeterminate,.indeterminate\:text-ellipsis-999999999:indeterminate,.invalid\:ellipsis-999999999:invalid,.invalid\:text-ellipsis-999999999:invalid,.last-child\:ellipsis-999999999:last-child,.last-child\:text-ellipsis-999999999:last-child,.last-of-type\:ellipsis-999999999:last-of-type,.last-of-type\:text-ellipsis-999999999:last-of-type,.left\:ellipsis-999999999:left,.left\:text-ellipsis-999999999:left,.link\:ellipsis-999999999:link,.link\:text-ellipsis-999999999:link,.local-link\:ellipsis-999999999:local-link,.local-link\:text-ellipsis-999999999:local-link,.only-child\:ellipsis-999999999:only-child,.only-child\:text-ellipsis-999999999:only-child,.only-of-type\:ellipsis-999999999:only-of-type,.only-of-type\:text-ellipsis-999999999:only-of-type,.optional\:ellipsis-999999999:optional,.optional\:text-ellipsis-999999999:optional,.out-of-range\:ellipsis-999999999:out-of-range,.out-of-range\:text-ellipsis-999999999:out-of-range,.past\:ellipsis-999999999:past,.past\:text-ellipsis-999999999:past,.placeholder-shown\:ellipsis-999999999:placeholder-shown,.placeholder-shown\:text-ellipsis-999999999:placeholder-shown,.read-only\:ellipsis-999999999:read-only,.read-only\:text-ellipsis-999999999:read-only,.read-write\:ellipsis-999999999:read-write,.read-write\:text-ellipsis-999999999:read-write,.required\:ellipsis-999999999:required,.required\:text-ellipsis-999999999:required,.right\:ellipsis-999999999:right,.right\:text-ellipsis-999999999:right,.root\:ellipsis-999999999:root,.root\:text-ellipsis-999999999:root,.scope\:ellipsis-999999999:scope,.scope\:text-ellipsis-999999999:scope,.target-within\:ellipsis-999999999:target-within,.target-within\:text-ellipsis-999999999:target-within,.target\:ellipsis-999999999:target,.target\:text-ellipsis-999999999:target,.text-ellipsis-999999999,.user-invalid\:ellipsis-999999999:user-invalid,.user-invalid\:text-ellipsis-999999999:user-invalid,.valid\:ellipsis-999999999:valid,.valid\:text-ellipsis-999999999:valid,.visited\:ellipsis-999999999:visited,.visited\:text-ellipsis-999999999:visited{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
-@media (min-width: 640px){
-.sm\@ellipsis-123,.sm\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
-.sm\@ellipsis-999999999,.sm\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
-}
-@media (min-width: 768px){
-.md\@ellipsis-123,.md\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
-.md\@ellipsis-999999999,.md\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
-}
+.active\:ellipsis-123:active,
+.active\:text-ellipsis-123:active,
+.any-link\:ellipsis-123:any-link,
+.any-link\:text-ellipsis-123:any-link,
+.blank\:ellipsis-123:blank,
+.blank\:text-ellipsis-123:blank,
+.checked\:ellipsis-123:checked,
+.checked\:text-ellipsis-123:checked,
+.current\:ellipsis-123:current,
+.current\:text-ellipsis-123:current,
+.default\:ellipsis-123:default,
+.default\:text-ellipsis-123:default,
+.defined\:ellipsis-123:defined,
+.defined\:text-ellipsis-123:defined,
+.disabled\:ellipsis-123:disabled,
+.disabled\:text-ellipsis-123:disabled,
+.drop\:ellipsis-123:drop,
+.drop\:text-ellipsis-123:drop,
+.ellipsis-123,
+.empty\:ellipsis-123:empty,
+.empty\:text-ellipsis-123:empty,
+.enabled\:ellipsis-123:enabled,
+.enabled\:text-ellipsis-123:enabled,
+.first-child\:ellipsis-123:first-child,
+.first-child\:text-ellipsis-123:first-child,
+.first-of-type\:ellipsis-123:first-of-type,
+.first-of-type\:text-ellipsis-123:first-of-type,
+.first\:ellipsis-123:first,
+.first\:text-ellipsis-123:first,
+.focus-visible\:ellipsis-123:focus-visible,
+.focus-visible\:text-ellipsis-123:focus-visible,
+.focus-within\:ellipsis-123:focus-within,
+.focus-within\:text-ellipsis-123:focus-within,
+.focus\:ellipsis-123:focus,
+.focus\:text-ellipsis-123:focus,
+.fullscreen\:ellipsis-123:fullscreen,
+.fullscreen\:text-ellipsis-123:fullscreen,
+.future\:ellipsis-123:future,
+.future\:text-ellipsis-123:future,
+.host\:ellipsis-123:host,
+.host\:text-ellipsis-123:host,
+.hover\:ellipsis-123:hover,
+.hover\:text-ellipsis-123:hover,
+.in-range\:ellipsis-123:in-range,
+.in-range\:text-ellipsis-123:in-range,
+.indeterminate\:ellipsis-123:indeterminate,
+.indeterminate\:text-ellipsis-123:indeterminate,
+.invalid\:ellipsis-123:invalid,
+.invalid\:text-ellipsis-123:invalid,
+.last-child\:ellipsis-123:last-child,
+.last-child\:text-ellipsis-123:last-child,
+.last-of-type\:ellipsis-123:last-of-type,
+.last-of-type\:text-ellipsis-123:last-of-type,
+.left\:ellipsis-123:left,
+.left\:text-ellipsis-123:left,
+.link\:ellipsis-123:link,
+.link\:text-ellipsis-123:link,
+.local-link\:ellipsis-123:local-link,
+.local-link\:text-ellipsis-123:local-link,
+.only-child\:ellipsis-123:only-child,
+.only-child\:text-ellipsis-123:only-child,
+.only-of-type\:ellipsis-123:only-of-type,
+.only-of-type\:text-ellipsis-123:only-of-type,
+.optional\:ellipsis-123:optional,
+.optional\:text-ellipsis-123:optional,
+.out-of-range\:ellipsis-123:out-of-range,
+.out-of-range\:text-ellipsis-123:out-of-range,
+.past\:ellipsis-123:past,
+.past\:text-ellipsis-123:past,
+.placeholder-shown\:ellipsis-123:placeholder-shown,
+.placeholder-shown\:text-ellipsis-123:placeholder-shown,
+.read-only\:ellipsis-123:read-only,
+.read-only\:text-ellipsis-123:read-only,
+.read-write\:ellipsis-123:read-write,
+.read-write\:text-ellipsis-123:read-write,
+.required\:ellipsis-123:required,
+.required\:text-ellipsis-123:required,
+.right\:ellipsis-123:right,
+.right\:text-ellipsis-123:right,
+.root\:ellipsis-123:root,
+.root\:text-ellipsis-123:root,
+.scope\:ellipsis-123:scope,
+.scope\:text-ellipsis-123:scope,
+.target-within\:ellipsis-123:target-within,
+.target-within\:text-ellipsis-123:target-within,
+.target\:ellipsis-123:target,
+.target\:text-ellipsis-123:target,
+.text-ellipsis-123,
+.user-invalid\:ellipsis-123:user-invalid,
+.user-invalid\:text-ellipsis-123:user-invalid,
+.valid\:ellipsis-123:valid,
+.valid\:text-ellipsis-123:valid,
+.visited\:ellipsis-123:visited,
+.visited\:text-ellipsis-123:visited{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
+.active\:ellipsis-999999999:active,
+.active\:text-ellipsis-999999999:active,
+.any-link\:ellipsis-999999999:any-link,
+.any-link\:text-ellipsis-999999999:any-link,
+.blank\:ellipsis-999999999:blank,
+.blank\:text-ellipsis-999999999:blank,
+.checked\:ellipsis-999999999:checked,
+.checked\:text-ellipsis-999999999:checked,
+.current\:ellipsis-999999999:current,
+.current\:text-ellipsis-999999999:current,
+.default\:ellipsis-999999999:default,
+.default\:text-ellipsis-999999999:default,
+.defined\:ellipsis-999999999:defined,
+.defined\:text-ellipsis-999999999:defined,
+.disabled\:ellipsis-999999999:disabled,
+.disabled\:text-ellipsis-999999999:disabled,
+.drop\:ellipsis-999999999:drop,
+.drop\:text-ellipsis-999999999:drop,
+.ellipsis-999999999,
+.empty\:ellipsis-999999999:empty,
+.empty\:text-ellipsis-999999999:empty,
+.enabled\:ellipsis-999999999:enabled,
+.enabled\:text-ellipsis-999999999:enabled,
+.first-child\:ellipsis-999999999:first-child,
+.first-child\:text-ellipsis-999999999:first-child,
+.first-of-type\:ellipsis-999999999:first-of-type,
+.first-of-type\:text-ellipsis-999999999:first-of-type,
+.first\:ellipsis-999999999:first,
+.first\:text-ellipsis-999999999:first,
+.focus-visible\:ellipsis-999999999:focus-visible,
+.focus-visible\:text-ellipsis-999999999:focus-visible,
+.focus-within\:ellipsis-999999999:focus-within,
+.focus-within\:text-ellipsis-999999999:focus-within,
+.focus\:ellipsis-999999999:focus,
+.focus\:text-ellipsis-999999999:focus,
+.fullscreen\:ellipsis-999999999:fullscreen,
+.fullscreen\:text-ellipsis-999999999:fullscreen,
+.future\:ellipsis-999999999:future,
+.future\:text-ellipsis-999999999:future,
+.host\:ellipsis-999999999:host,
+.host\:text-ellipsis-999999999:host,
+.hover\:ellipsis-999999999:hover,
+.hover\:text-ellipsis-999999999:hover,
+.in-range\:ellipsis-999999999:in-range,
+.in-range\:text-ellipsis-999999999:in-range,
+.indeterminate\:ellipsis-999999999:indeterminate,
+.indeterminate\:text-ellipsis-999999999:indeterminate,
+.invalid\:ellipsis-999999999:invalid,
+.invalid\:text-ellipsis-999999999:invalid,
+.last-child\:ellipsis-999999999:last-child,
+.last-child\:text-ellipsis-999999999:last-child,
+.last-of-type\:ellipsis-999999999:last-of-type,
+.last-of-type\:text-ellipsis-999999999:last-of-type,
+.left\:ellipsis-999999999:left,
+.left\:text-ellipsis-999999999:left,
+.link\:ellipsis-999999999:link,
+.link\:text-ellipsis-999999999:link,
+.local-link\:ellipsis-999999999:local-link,
+.local-link\:text-ellipsis-999999999:local-link,
+.only-child\:ellipsis-999999999:only-child,
+.only-child\:text-ellipsis-999999999:only-child,
+.only-of-type\:ellipsis-999999999:only-of-type,
+.only-of-type\:text-ellipsis-999999999:only-of-type,
+.optional\:ellipsis-999999999:optional,
+.optional\:text-ellipsis-999999999:optional,
+.out-of-range\:ellipsis-999999999:out-of-range,
+.out-of-range\:text-ellipsis-999999999:out-of-range,
+.past\:ellipsis-999999999:past,
+.past\:text-ellipsis-999999999:past,
+.placeholder-shown\:ellipsis-999999999:placeholder-shown,
+.placeholder-shown\:text-ellipsis-999999999:placeholder-shown,
+.read-only\:ellipsis-999999999:read-only,
+.read-only\:text-ellipsis-999999999:read-only,
+.read-write\:ellipsis-999999999:read-write,
+.read-write\:text-ellipsis-999999999:read-write,
+.required\:ellipsis-999999999:required,
+.required\:text-ellipsis-999999999:required,
+.right\:ellipsis-999999999:right,
+.right\:text-ellipsis-999999999:right,
+.root\:ellipsis-999999999:root,
+.root\:text-ellipsis-999999999:root,
+.scope\:ellipsis-999999999:scope,
+.scope\:text-ellipsis-999999999:scope,
+.target-within\:ellipsis-999999999:target-within,
+.target-within\:text-ellipsis-999999999:target-within,
+.target\:ellipsis-999999999:target,
+.target\:text-ellipsis-999999999:target,
+.text-ellipsis-999999999,
+.user-invalid\:ellipsis-999999999:user-invalid,
+.user-invalid\:text-ellipsis-999999999:user-invalid,
+.valid\:ellipsis-999999999:valid,
+.valid\:text-ellipsis-999999999:valid,
+.visited\:ellipsis-999999999:visited,
+.visited\:text-ellipsis-999999999:visited{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
 @media (min-width: 1024px){
-.lg\@ellipsis-123,.lg\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
-.lg\@ellipsis-999999999,.lg\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
+.lg\@ellipsis-123,
+.lg\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
+.lg\@ellipsis-999999999,
+.lg\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
 }
 @media (min-width: 1280px){
-.xl\@ellipsis-123,.xl\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
-.xl\@ellipsis-999999999,.xl\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
+.xl\@ellipsis-123,
+.xl\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
+.xl\@ellipsis-999999999,
+.xl\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
 }
-@supports (display: grid){
-.supportGrid\@ellipsis-123,.supportGrid\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
-.supportGrid\@ellipsis-999999999,.supportGrid\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
-}
-/* layer: 00900 */
-.active\:text-123:active,.any-link\:text-123:any-link,.blank\:text-123:blank,.checked\:text-123:checked,.current\:text-123:current,.default\:text-123:default,.defined\:text-123:defined,.disabled\:text-123:disabled,.drop\:text-123:drop,.empty\:text-123:empty,.enabled\:text-123:enabled,.first-child\:text-123:first-child,.first-of-type\:text-123:first-of-type,.first\:text-123:first,.focus-visible\:text-123:focus-visible,.focus-within\:text-123:focus-within,.focus\:text-123:focus,.fullscreen\:text-123:fullscreen,.future\:text-123:future,.host\:text-123:host,.hover\:text-123:hover,.in-range\:text-123:in-range,.indeterminate\:text-123:indeterminate,.invalid\:text-123:invalid,.last-child\:text-123:last-child,.last-of-type\:text-123:last-of-type,.left\:text-123:left,.link\:text-123:link,.local-link\:text-123:local-link,.only-child\:text-123:only-child,.only-of-type\:text-123:only-of-type,.optional\:text-123:optional,.out-of-range\:text-123:out-of-range,.past\:text-123:past,.placeholder-shown\:text-123:placeholder-shown,.read-only\:text-123:read-only,.read-write\:text-123:read-write,.required\:text-123:required,.right\:text-123:right,.root\:text-123:root,.scope\:text-123:scope,.target-within\:text-123:target-within,.target\:text-123:target,.text-123,.user-invalid\:text-123:user-invalid,.valid\:text-123:valid,.visited\:text-123:visited{color: rgba(17,34,51,1) !important;}
 @media (min-width: 640px){
-.sm\@text-123{color: rgba(17,34,51,1) !important;}
+.sm\@ellipsis-123,
+.sm\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
+.sm\@ellipsis-999999999,
+.sm\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
 }
 @media (min-width: 768px){
-.md\@text-123{color: rgba(17,34,51,1) !important;}
+.md\@ellipsis-123,
+.md\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
+.md\@ellipsis-999999999,
+.md\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
 }
+@supports (display: grid){
+.supportGrid\@ellipsis-123,
+.supportGrid\@text-ellipsis-123{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 123 !important;-webkit-box-orient: vertical !important;}
+.supportGrid\@ellipsis-999999999,
+.supportGrid\@text-ellipsis-999999999{overflow: hidden !important;text-overflow: ellipsis !important;display: -webkit-box !important;-webkit-line-clamp: 999999999 !important;-webkit-box-orient: vertical !important;}
+}
+/* layer: 00900 */
+.active\:text-123:active,
+.any-link\:text-123:any-link,
+.blank\:text-123:blank,
+.checked\:text-123:checked,
+.current\:text-123:current,
+.default\:text-123:default,
+.defined\:text-123:defined,
+.disabled\:text-123:disabled,
+.drop\:text-123:drop,
+.empty\:text-123:empty,
+.enabled\:text-123:enabled,
+.first-child\:text-123:first-child,
+.first-of-type\:text-123:first-of-type,
+.first\:text-123:first,
+.focus-visible\:text-123:focus-visible,
+.focus-within\:text-123:focus-within,
+.focus\:text-123:focus,
+.fullscreen\:text-123:fullscreen,
+.future\:text-123:future,
+.host\:text-123:host,
+.hover\:text-123:hover,
+.in-range\:text-123:in-range,
+.indeterminate\:text-123:indeterminate,
+.invalid\:text-123:invalid,
+.last-child\:text-123:last-child,
+.last-of-type\:text-123:last-of-type,
+.left\:text-123:left,
+.link\:text-123:link,
+.local-link\:text-123:local-link,
+.only-child\:text-123:only-child,
+.only-of-type\:text-123:only-of-type,
+.optional\:text-123:optional,
+.out-of-range\:text-123:out-of-range,
+.past\:text-123:past,
+.placeholder-shown\:text-123:placeholder-shown,
+.read-only\:text-123:read-only,
+.read-write\:text-123:read-write,
+.required\:text-123:required,
+.right\:text-123:right,
+.root\:text-123:root,
+.scope\:text-123:scope,
+.target-within\:text-123:target-within,
+.target\:text-123:target,
+.text-123,
+.user-invalid\:text-123:user-invalid,
+.valid\:text-123:valid,
+.visited\:text-123:visited{color: rgba(17,34,51,1) !important;}
 @media (min-width: 1024px){
 .lg\@text-123{color: rgba(17,34,51,1) !important;}
 }
 @media (min-width: 1280px){
 .xl\@text-123{color: rgba(17,34,51,1) !important;}
+}
+@media (min-width: 640px){
+.sm\@text-123{color: rgba(17,34,51,1) !important;}
+}
+@media (min-width: 768px){
+.md\@text-123{color: rgba(17,34,51,1) !important;}
 }
 @supports (display: grid){
 .supportGrid\@text-123{color: rgba(17,34,51,1) !important;}

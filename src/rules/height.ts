@@ -15,6 +15,9 @@ export const height = () =>
         const { num, unit } = groups as { num: string; unit?: string }
         return ConvertToCssObject([`height: ${getUnitAndNum(unit, num)}`])
       },
-      generatorLayer(20),
+      {
+        ...generatorLayer(20),
+        autocomplete: `(h|height)-(num)(${UNIT_ENUM_STR}|)`,
+      },
     ],
   ] as Rule[]

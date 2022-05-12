@@ -13,6 +13,9 @@ export const flexNum = () =>
         const { value } = groups as { value: string }
         return ConvertToCssObject([`flex: ${value}`])
       },
-      generatorLayer(250),
+      {
+        ...generatorLayer(250),
+        autocomplete: ['flex-<num>', 'flex-(null|auto|none)'],
+      },
     ],
   ] as Rule[]
