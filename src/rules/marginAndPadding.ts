@@ -29,13 +29,14 @@ export const marginAndPadding = () =>
           unit?: string
         }
         let value = ''
-        if (auto) {
-          value = 'auto'
-        }
         if (isMinus) {
           value = `${getUnitAndNum(unit, 0 - Number(num))}`
         } else {
           value = `${getUnitAndNum(unit, num)}`
+        }
+        // last set auto
+        if (auto) {
+          value = 'auto'
         }
         return ConvertToCssObject([`margin:${value}`])
       },
@@ -61,13 +62,13 @@ export const marginAndPadding = () =>
           direction: string
         }
         let value = ''
-        if (auto) {
-          value = 'auto'
-        }
         if (isMinus) {
           value = `${getUnitAndNum(unit, 0 - Number(num))}`
         } else {
           value = `${getUnitAndNum(unit, num)}`
+        }
+        if (auto) {
+          value = 'auto'
         }
         return ConvertToCssObject(
           DIRECTION_MAP.get(direction)!.reduce(
@@ -98,13 +99,13 @@ export const marginAndPadding = () =>
           direction: string
         }
         let value = ''
-        if (auto) {
-          value = 'auto'
-        }
         if (isMinus) {
           value = `${getUnitAndNum(unit, 0 - Number(num))}`
         } else {
           value = `${getUnitAndNum(unit, num)}`
+        }
+        if (auto) {
+          value = 'auto'
         }
         return ConvertToCssObject(
           DIRECTION_MAP.get(direction)!.reduce(
@@ -136,13 +137,13 @@ export const marginAndPadding = () =>
           unit?: string
         }
         let value = ''
-        if (auto) {
-          value = 'auto'
-        }
         if (isMinus) {
           value = `${getUnitAndNum(unit, 0 - Number(num))}`
         } else {
           value = `${getUnitAndNum(unit, num)}`
+        }
+        if (auto) {
+          value = 'auto'
         }
         return ConvertToCssObject([`padding:${value}`])
       },
@@ -168,13 +169,14 @@ export const marginAndPadding = () =>
           direction: string
         }
         let value = ''
-        if (auto) {
-          value = 'auto'
-        }
+
         if (isMinus) {
           value = `${getUnitAndNum(unit, 0 - Number(num))}`
         } else {
           value = `${getUnitAndNum(unit, num)}`
+        }
+        if (auto) {
+          value = 'auto'
         }
         return ConvertToCssObject(
           DIRECTION_MAP.get(direction)!.reduce(
@@ -205,13 +207,13 @@ export const marginAndPadding = () =>
           direction: string
         }
         let value = ''
-        if (auto) {
-          value = 'auto'
-        }
         if (isMinus) {
           value = `${getUnitAndNum(unit, 0 - Number(num))}`
         } else {
           value = `${getUnitAndNum(unit, num)}`
+        }
+        if (auto) {
+          value = 'auto'
         }
         return ConvertToCssObject(
           DIRECTION_MAP.get(direction)!.reduce(
