@@ -179,6 +179,21 @@ export const VERTICAL_ALIGN_ENUM = [
   'initial',
   'unset',
 ] as const
+
+export const WHITE_SPACE_ENUM = [
+  'normal',
+  'nowrap',
+  'pre',
+  'pre-wrap',
+  'pre-line',
+  'break-spaces',
+  'inherit',
+  'initial',
+  'revert',
+  'revert-layer',
+  'unset',
+] as const
+
 export const DISPLAY_STR = toRegexStr(DISPLAY_ENUM as unknown as string[])
 export const PSEUDO_STR = toRegexStr(PSEUDO_ENUM as unknown as string[])
 export const JUSTIFY_CONTENT_ENUM_STR = toRegexStr(
@@ -193,6 +208,9 @@ export const VERTICAL_ALIGN_STR = toRegexStr(
   VERTICAL_ALIGN_ENUM as unknown as string[]
 )
 export const GAP_ENUM_STR = toRegexStr(GAP_ENUM as unknown as string[])
+export const WHITE_SPACE_ENUM_STR = toRegexStr(
+  WHITE_SPACE_ENUM as unknown as string[]
+)
 
 export const BASE_MEDIA_QUERY = {
   sm: '(min-width: 640px)',

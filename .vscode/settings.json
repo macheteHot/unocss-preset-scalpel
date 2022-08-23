@@ -166,5 +166,6 @@
     "source.fixAll.eslint": true
   },
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": ["bumpp", "nesw", "pnpm", "unocss", "vmax", "vmin"]
 }

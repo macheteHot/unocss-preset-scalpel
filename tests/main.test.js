@@ -73,6 +73,7 @@ const testConfigs = [
   { name: 'userSelect', input: import('./rules/userSelect.js') },
   { name: 'verticalAlign', input: import('./rules/verticalAlign.js') },
   { name: 'visibility', input: import('./rules/visibility.js') },
+  { name: 'whiteSpace', input: import('./rules/whiteSpace.js') },
   { name: 'width', input: import('./rules/width.js') },
   { name: 'wordBreak', input: import('./rules/wordBreak.js') },
   { name: 'zIndex', input: import('./rules/zIndex.js') },
@@ -85,8 +86,8 @@ for (let i = testConfigs.length - 1; i >= 0; i--) {
 
     const baseList = result.default.flat(Infinity)
 
-    const pseduList = PSEUDO_LIST.map((psedu) =>
-      baseList.map((base) => `${psedu}:${base}`)
+    const pseudoList = PSEUDO_LIST.map((pseudo) =>
+      baseList.map((base) => `${pseudo}:${base}`)
     ).flat(Infinity)
 
     const mediaQueryList = mediaQueryKeys
@@ -96,7 +97,7 @@ for (let i = testConfigs.length - 1; i >= 0; i--) {
     // ------------------------- generate css -------------------------
     const { css } = await generator.generate(
       `<div class="${baseList
-        .concat(pseduList, mediaQueryList)
+        .concat(pseudoList, mediaQueryList)
         .join(' ')}"></div>`
     )
 

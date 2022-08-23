@@ -114,6 +114,20 @@ export const UNIT_LIST = [
   '',
 ]
 
+export const WHITE_SPACE_LIST = [
+  'normal',
+  'nowrap',
+  'pre',
+  'pre-wrap',
+  'pre-line',
+  'break-spaces',
+  'inherit',
+  'initial',
+  'revert',
+  'revert-layer',
+  'unset',
+]
+
 export const NUM_LIST = [0, 123, 0.25, 3.1415926, 999999999]
 
 export const NumAndUnitList = NUM_LIST.map((num) =>
