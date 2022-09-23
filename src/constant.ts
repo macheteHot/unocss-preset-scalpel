@@ -110,6 +110,7 @@ export const UNIT_ENUM = [
   'vh',
   'vmin',
   'vmax',
+  'rpx',
   'p',
   '%',
   'v',
