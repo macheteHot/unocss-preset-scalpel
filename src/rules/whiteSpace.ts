@@ -16,7 +16,7 @@ export const WhiteSpace = () =>
       },
       {
         ...generatorLayer(99999),
-        autocomplete: `align-items-(${WHITE_SPACE_ENUM_STR})`,
+        autocomplete: `white-space-(${WHITE_SPACE_ENUM_STR})`,
       },
     ],
   ] as Rule[]
