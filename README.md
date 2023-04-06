@@ -260,12 +260,16 @@ config object like this
 - ### border-radius
 
   > set border-radius any number and unit  
-  > use <code>br</code> or <code>border-radius</code>
+  > use <code>br</code> or <code>border-radius</code>  
+  > support shortcut <code>t</code> <code>l</code> <code>r</code> <code>b</code> <code>tl</code> <code>lt</code> <code>tr</code> <code>rt</code> <code>bl</code> <code>lb</code> <code>br</code> <code>rb</code>
 
-  | Class             | Properties         |
-  | :---------------- | :----------------- |
-  | br-8              | border-radius:8px; |
-  | border-radius-15% | border-radius:15%; |
+  | Class             | Properties                                                       |
+  | :---------------- | :--------------------------------------------------------------- |
+  | br-8              | border-radius:8px;                                               |
+  | border-radius-15% | border-radius:15%;                                               |
+  | br-t-50%          | border-top-left-radius:50%;<br/>border-top-right-radius:50%;     |
+  | br-l-20           | border-top-left-radius:20px;<br/>border-bottom-left-radius:20px; |
+  | br-bl-3           | border-bottom-left-radius:3px;                                   |
 
 - ### circle
 
