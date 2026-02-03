@@ -5,6 +5,10 @@ on:
     tags:
       - v*
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -26,4 +30,4 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
-      - run: npm publish
+      - run: npm publish --provenance --access public
