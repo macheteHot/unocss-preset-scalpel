@@ -162,8 +162,7 @@
   ],
   "emmet.triggerExpansionOnTab": true,
   "editor.codeActionsOnSave": {
-    // eslint 自动修复
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "git.ignoreLimitWarning": true,

@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "Machete <rtpppp163@gmail.com>",
   "sideEffects": false,
-  "packageManager": "pnpm@6.24.1",
+  "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">=16.13.0"
   },
