@@ -7,13 +7,15 @@ on:
 
 permissions:
   id-token: write
-  contents: read
+  contents: write
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: oven-sh/setup-bun@v2
         with:
@@ -24,18 +26,19 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
 
-      - run: npx conventional-github-releaser -p angular
-        continue-on-error: true
-        env:
-          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
       - name: Build
         run: bun run build
 
-      - name: Publish
+      - name: Create GitHub Release
+        run: npx conventional-github-releaser -p angular
+        continue-on-error: true
+        env:
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npm
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
