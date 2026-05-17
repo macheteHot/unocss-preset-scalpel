@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "Machete <rtpppp163@gmail.com>",
   "sideEffects": false,
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "bun@1.3.13",
   "engines": {
     "node": ">=16.13.0"
   },
@@ -25,55 +25,37 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "llms.txt"
   ],
   "scripts": {
-    "prepare": "husky install",
-    "dev": "vite",
-    "fmt": "eslint --fix .",
-    "build": "tsc && vite build && api-extractor run",
-    "release": "npx bumpp package.json --commit --push --tag",
-    "test": "tsc && vite build && uvu tests main.test.js"
+    "dev": "bunx serve .",
+    "lint": "oxlint && eslint .",
+    "lint:oxc": "oxlint",
+    "lint:eslint": "eslint .",
+    "format": "prettier --write .",
+    "build": "tsup",
+    "test": "bun test",
+    "release": "npx bumpp package.json --commit --push --tag"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.23.2",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^17.0.32",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
     "bumpp": "^8.2.1",
-    "decimal.js": "^10.3.1",
-    "eslint": "^8.15.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-import-resolver-typescript": "^2.7.1",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-standard": "^5.0.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2",
-    "prettier-eslint": "^14.0.3",
-    "typescript": "^4.6.4",
-    "unocss": "^0.33.2",
-    "uvu": "^0.5.3",
-    "vite": "^2.9.9"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "*.{json,jsonc}": [
-      "prettier --write"
-    ]
+    "bun-types": "^1.3.14",
+    "eslint": "^10.2.1",
+    "globals": "^17.6.0",
+    "oxlint": "^1.61.0",
+    "prettier": "^3.8.3",
+    "tsup": "^8.5.1",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "unocss": "^66.6.8"
   }
 }
