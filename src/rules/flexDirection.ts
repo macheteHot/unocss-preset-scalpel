@@ -11,7 +11,7 @@ export const flexDirection = () =>
       /^(flex-direction|flex)-(?<value>row|row-reverse|column|column-reverse)$/,
       ({ groups }) => {
         const { value } = groups as { value: string }
-        return ConvertToCssObject([`flex-direction: ${value}`])
+        return ConvertToCssObject([`display: flex`, `flex-direction: ${value}`])
       },
       {
         ...generatorLayer(230),

@@ -1,4 +1,5 @@
-import type { Preset, Rule } from 'unocss'
+import { definePreset } from 'unocss'
+import type { Rule } from 'unocss'
 import type { IScalpelOptions } from './types'
 import { setConfig as setConfigToUtils } from './utils'
 import {
@@ -59,7 +60,7 @@ function setConfig(config: Partial<IScalpelOptions>): void {
 /**
  * @public
  */
-export function presetScalpel(options?: IScalpelOptions): Preset {
+export const presetScalpel = definePreset((options?: IScalpelOptions) => {
   setConfig(options ?? {})
 
   return {
@@ -79,4 +80,4 @@ export function presetScalpel(options?: IScalpelOptions): Preset {
       }, [])
       .flat(1),
   }
-}
+})

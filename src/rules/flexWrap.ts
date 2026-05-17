@@ -9,7 +9,7 @@ export const flexWrap = () =>
       /^flex(-wrap)?-(?<value>inherit|initial|nowrap|wrap|wrap-reverse)$/,
       ({ groups }) => {
         const { value } = groups as { value: string }
-        return ConvertToCssObject([`flex-wrap: ${value}`])
+        return ConvertToCssObject([`display: flex`, `flex-wrap: ${value}`])
       },
       {
         ...generatorLayer(240),

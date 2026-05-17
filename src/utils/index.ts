@@ -1,5 +1,4 @@
 import type { CSSObject } from 'unocss'
-import Decimal from 'decimal.js'
 import type { IDirection, IScalpelOptions } from '../types'
 
 let presetConfig: Required<IScalpelOptions>
@@ -50,7 +49,9 @@ function v2any(num: string) {
   if (newNum < minPixelValue!) {
     return num
   }
-  return new Decimal(newNum).div(rootValue).toFixed(unitPrecision)
+  const factor = Math.pow(10, unitPrecision ?? 5)
+  const result = Math.round((newNum / rootValue) * factor) / factor
+  return result.toFixed(unitPrecision ?? 5)
 }
 
 export function getUnitAndNum(
