@@ -1,0 +1,181 @@
+# unocss-preset-scalpel
+
+A UnoCSS preset that maps CSS properties directly to class names using native CSS syntax.
+
+## Core Concept
+
+Class names follow the pattern `property-value` or shorthand aliases.
+Default unit is `px` (can be omitted). Special units: `p` = `%`, `v` = converts via `vToAny` config (default: rem).
+Negative values use `m-` prefix: `m-m-10` → `margin: -10px`.
+
+## All Rules
+
+### Sizing
+| Class | CSS |
+|---|---|
+| `w-<n>`, `width-<n>` | `width: <n>px` |
+| `h-<n>`, `height-<n>` | `height: <n>px` |
+| `min-w-<n>`, `min-width-<n>` | `min-width` |
+| `max-w-<n>`, `max-width-<n>` | `max-width` |
+| `min-h-<n>`, `min-height-<n>` | `min-height` |
+| `max-h-<n>`, `max-height-<n>` | `max-height` |
+| `square-<n>` | `width` + `height` (same value) |
+
+### Spacing
+| Class | CSS |
+|---|---|
+| `m-<n>` | `margin: <n>px` |
+| `m-(t\|b\|l\|r)-<n>` | `margin-top/bottom/left/right` |
+| `m-(x\|y)-<n>` | margin left+right / top+bottom |
+| `m-m-<n>` | `margin: -<n>px` (negative) |
+| `m-auto`, `m-(t\|b\|l\|r\|x\|y)-auto` | `margin: auto` |
+| `p-<n>`, `p-(t\|b\|l\|r\|x\|y)-<n>` | same but padding |
+
+### Position / Orientation
+| Class | CSS |
+|---|---|
+| `position-(static\|relative\|absolute\|fixed\|sticky\|unset\|inherit\|initial)` | `position` |
+| `t-<n>`, `top-<n>` | `top` |
+| `b-<n>`, `bottom-<n>` | `bottom` |
+| `l-<n>`, `left-<n>` | `left` |
+| `r-<n>`, `right-<n>` | `right` |
+| `b-m-<n>`, `r-m-<n>` etc | negative orientation |
+| `z-index-<n>`, `z-index-m-<n>` | `z-index` / negative |
+
+### Display
+| Class | CSS |
+|---|---|
+| `d-<value>`, `display-<value>` | `display: <value>` |
+| Values: `flex`, `grid`, `block`, `inline`, `inline-flex`, `inline-block`, `none`, `table`, `contents`, `flow-root`, `inline-grid`, `list-item`, `table-row`, `revert`, `initial`, `inherit`, `unset` | |
+
+### Flexbox
+| Class | CSS |
+|---|---|
+| `flex-column` | `display:flex; flex-direction:column` |
+| `flex-row` | `display:flex; flex-direction:row` |
+| `flex-column-reverse` | `display:flex; flex-direction:column-reverse` |
+| `flex-row-reverse` | `display:flex; flex-direction:row-reverse` |
+| `flex-direction-(row\|column\|row-reverse\|column-reverse)` | `flex-direction` only |
+| `flex-wrap` | `display:flex; flex-wrap:wrap` |
+| `flex-nowrap` | `display:flex; flex-wrap:nowrap` |
+| `flex-wrap-reverse` | `display:flex; flex-wrap:wrap-reverse` |
+| `flex-wrap-(wrap\|nowrap\|wrap-reverse\|inherit\|initial)` | `flex-wrap` only |
+| `flex-<justify>-<align>` | `display:flex` + `justify-content` + `align-items` |
+| `flex-<n>`, `flex-auto`, `flex-none` | `flex: <n>` |
+| `flex-shrink-<n>`, `flex-shrink-(initial\|inherit)` | `flex-shrink` |
+| `flex-grow-<n>`, `flex-grow-(initial\|inherit)` | `flex-grow` |
+| `flex-basis-<n>`, `flex-basis-(auto\|initial\|inherit)` | `flex-basis` |
+| `align-items-(center\|start\|end\|flex-start\|flex-end\|baseline\|stretch\|...)` | `align-items` |
+| `justify-content-(center\|start\|end\|between\|around\|evenly\|...)` | `justify-content` |
+
+`flex-<justify>-<align>` shorthand: justify values: `center` `start` `end` `flex-start` `flex-end` `left` `right` `between` `around` `evenly` `stretch` `inherit` `initial` `unset` `normal` / align values: `auto` `center` `end` `flex-end` `flex-start` `inherit` `initial` `normal` `self-end` `self-start` `start` `stretch` `unset` `baseline`
+
+### Gap
+| Class | CSS |
+|---|---|
+| `gap-<n>` | `column-gap` + `row-gap` |
+| `gap-(unset\|initial\|inherit\|normal)` | gap with keyword |
+| `c-gap-<n>`, `column-gap-<n>` | `column-gap` |
+| `r-gap-<n>`, `row-gap-<n>` | `row-gap` |
+
+### Border
+| Class | CSS |
+|---|---|
+| `border-<n>` | `border-width: <n>px` |
+| `border-(x\|y\|t\|b\|l\|r)-<n>` | directional border-width |
+| `border-w-<n>`, `border-width-<n>` | `border-width` |
+| `border-style-(none\|hidden\|dotted\|dashed\|solid\|double\|groove\|ridge\|inset\|outset\|inherit)` | `border-style` |
+| `border-(dotted\|solid\|...)` | shorthand border-style |
+
+### Border Radius
+| Class | CSS |
+|---|---|
+| `br-<n>`, `border-radius-<n>` | `border-radius` |
+| `br-(t\|b\|l\|r)-<n>` | two-corner radius |
+| `br-(tl\|tr\|bl\|br\|lt\|rt\|lb\|rb)-<n>` | single corner |
+| `circle` | `border-radius: 50%` |
+
+### Color
+Accepts: named colors (configured), 3/6/8-digit hex. 8-digit includes alpha.
+Opacity suffix (1-99): `c-red-50` → 50% opacity.
+| Class | CSS |
+|---|---|
+| `c-<color>`, `color-<color>`, `text-<color>` | `color` |
+| `bg-<color>`, `background-<color>` | `background-color` |
+| `border-<color>`, `border-c-<color>`, `border-color-<color>` | `border-color` |
+
+### Typography
+| Class | CSS |
+|---|---|
+| `fs-<n>`, `font-size-<n>` | `font-size` |
+| `fw-<n>`, `font-weight-<n>`, `fw-bold` etc | `font-weight` |
+| `lh-<n>`, `line-height-<n>` | `line-height` |
+| `letter-spacing-<n>`, `letter-spacing-m-<n>` | `letter-spacing` / negative |
+| `text-(center\|left\|right\|start\|end\|justify\|match-parent)` | `text-align` |
+| `text-align-(center\|...)` | `text-align` (explicit) |
+| `text-last-(auto\|left\|right\|center\|...)` | `text-align-last` |
+| `text-align-last-(auto\|...)` | `text-align-last` (explicit) |
+| `text-(underline\|overline\|line-through\|none\|blink\|inherit)` | `text-decoration` |
+| `text-decoration-(underline\|...)` | `text-decoration` (explicit) |
+| `ellipsis` | single-line ellipsis |
+| `ellipsis-<n>`, `text-ellipsis-<n>` | multi-line ellipsis (n lines) |
+| `white-space-(normal\|nowrap\|pre\|pre-wrap\|pre-line\|break-spaces\|...)` | `white-space` |
+| `word-break-(normal\|break-all\|keep-all\|break-word\|inherit\|initial\|unset)` | `word-break` |
+
+### Box Model
+| Class | CSS |
+|---|---|
+| `box-sizing-(content-box\|border-box)` | `box-sizing` |
+| `overflow-x-(hidden\|auto\|visible\|scroll\|inherit)` | `overflow-x` |
+| `overflow-y-(...)` | `overflow-y` |
+| `object-fit-(fill\|contain\|cover\|none\|scale-down\|inherit\|initial\|revert\|unset)` | `object-fit` |
+
+### Visual
+| Class | CSS |
+|---|---|
+| `opacity-<1-100>` | opacity ÷ 100 |
+| `visibility-(visible\|hidden\|collapse\|inherit\|initial\|revert\|unset)` | `visibility` |
+| `vertical-align-(baseline\|top\|middle\|bottom\|...)` or `vertical-align-<n>` | `vertical-align` |
+| `cursor-(pointer\|default\|none\|move\|grab\|...)` | `cursor` |
+| `select-(none\|auto\|text\|all\|contain\|element)` | `user-select` |
+
+## Pseudo & Media Query
+
+```html
+<div class="hover:c-red">           <!-- :hover -->
+<div class="md@color-red">          <!-- @media (min-width: 768px) -->
+<div class="md@hover:color-red">    <!-- combined -->
+<div class="w-100!">                <!-- !important -->
+```
+
+Supported pseudo: `hover` `focus` `active` `disabled` `checked` `first-child` `last-child` `first-of-type` `last-of-type` `only-child` `only-of-type` `placeholder-shown` `read-only` `read-write` `required` `optional` `valid` `invalid` `in-range` `out-of-range` `visited` `link` `target` `empty` `root` `scope` and many more.
+
+## Config Options
+
+```ts
+presetScalpel({
+  unit: 'px',                    // default unit when omitted
+  important: false,              // force !important on all
+  colors: { primary: '#1677ff' },// extend named colors
+  mediaQueries: {                // extend media query keys
+    sm: 'media (min-width: 640px)',
+    md: 'media (min-width: 768px)',
+    lg: 'media (min-width: 1024px)',
+    xl: 'media (min-width: 1280px)',
+  },
+  ignoreRules: ['flexBasis'],    // disable specific rule groups by name
+  vToAny: {
+    unit: 'rem',                 // target unit for v conversion
+    rootValue: 16,               // divisor: 16v → 1rem
+    unitPrecision: 5,
+    minPixelValue: 1,            // values below this skip conversion
+  },
+})
+```
+
+## UnoCSS Configuration Reference
+
+This preset is used inside a UnoCSS config file ( / ).
+
+For the config file format and all available options (presets, shortcuts, safelist, variants, transformers, extractors, etc.) see:
+https://unocss.dev/guide/config-file

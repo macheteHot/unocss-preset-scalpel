@@ -16,6 +16,7 @@
 npm i unocss-preset-scalpel unocss --save-dev # with npm
 yarn add unocss-preset-scalpel unocss -D # with yarn
 pnpm add unocss-preset-scalpel unocss -D # with pnpm
+bun add unocss-preset-scalpel unocss -D # with bun
 ```
 
 ## Usage
@@ -383,12 +384,14 @@ config object like this
   > set flex-direction  
   > support shortcut <code>flex</code>
 
-  | Class                      | Properties                     |
-  | :------------------------- | :----------------------------- |
-  | flex-direction-row         | flex-direction;row;            |
-  | flex-direction-row-reverse | flex-direction;row-reverse;    |
-  | flex-column                | flex-direction;column;         |
-  | flex-column-reverse        | flex-direction;column-reverse; |
+  > shortcut `flex-column`, `flex-row` etc. also sets `display:flex` automatically
+
+  | Class                      | Properties                                       |
+  | :------------------------- | :----------------------------------------------- |
+  | flex-direction-row         | flex-direction:row;                              |
+  | flex-direction-row-reverse | flex-direction:row-reverse;                      |
+  | flex-column                | display:flex;<br/>flex-direction:column;         |
+  | flex-column-reverse        | display:flex;<br/>flex-direction:column-reverse; |
 
   > enum values
 
@@ -497,9 +500,12 @@ config object like this
   > set flex-wrap  
   > support shortcut <code>flex</code>
 
-  | Class          | Properties      |
-  | :------------- | :-------------- |
-  | flex-wrap-wrap | flex-wrap:wrap; |
+  > also sets `display:flex` automatically
+
+  | Class            | Properties                          |
+  | :--------------- | :---------------------------------- |
+  | flex-wrap-wrap   | display:flex;<br/>flex-wrap:wrap;   |
+  | flex-wrap-nowrap | display:flex;<br/>flex-wrap:nowrap; |
 
   > enum values
 

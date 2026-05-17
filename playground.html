@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>scalpel playground</title>
+  <script type="importmap" id="importmap">
+    { "imports": { "unocss": "https://cdn.jsdelivr.net/npm/@unocss/core@66.6.8/dist/index.mjs" } }
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/vs2015.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify-css.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: monospace; height: 100vh; display: flex; flex-direction: column; background: #1e1e1e; color: #d4d4d4; }
+    header { padding: 10px 20px; background: #252526; border-bottom: 1px solid #333; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    header h1 { font-size: 14px; color: #9cdcfe; }
+    header label { font-size: 12px; color: #808080; display: flex; align-items: center; gap: 6px; }
+    header input { background: #3c3c3c; border: 1px solid #555; color: #d4d4d4; padding: 4px 8px; border-radius: 3px; font-size: 12px; width: 80px; }
+    button { background: #0078d4; color: #fff; border: none; padding: 4px 12px; border-radius: 3px; cursor: pointer; font-size: 12px; }
+    button:hover { background: #106ebe; }
+    #status { font-size: 11px; margin-left: auto; }
+    #status.ok { color: #4ec9b0; }
+    #status.err { color: #f48771; }
+    .panes { flex: 1; display: flex; overflow: hidden; }
+    .pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+    .pane + .pane { border-left: 1px solid #333; }
+    .pane-header { padding: 6px 16px; font-size: 11px; color: #808080; background: #252526; border-bottom: 1px solid #333; text-transform: uppercase; letter-spacing: 1px; flex-shrink: 0; }
+    textarea { flex: 1; padding: 16px; font-size: 13px; line-height: 1.6; overflow: auto; resize: none; border: none; outline: none; background: #1e1e1e; color: #9cdcfe; }
+    .divider { width: 4px; background: #333; cursor: col-resize; flex-shrink: 0; }
+    .divider:hover, .divider.dragging { background: #0078d4; }
+    #output-wrap { flex: 1; overflow: auto; }
+    #output-wrap pre { margin: 0; height: 100%; }
+    #output-wrap code { display: block; padding: 16px !important; font-size: 13px !important; line-height: 1.6 !important; background: #1e1e1e !important; columns: 180px; column-gap: 24px; column-fill: auto; height: calc(100vh - 45px - 30px); }
+    #output-wrap .rule-block { break-inside: avoid; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>unocss-preset-scalpel playground</h1>
+  <label>@unocss/core version
+    <input id="version" value="66.6.8" />
+  </label>
+  <button onclick="switchVersion()">switch (reload)</button>
+  <span id="status" class="ok">✓ ready</span>
+</header>
+
+<div class="panes">
+  <div class="pane" style="flex: 0 0 280px">
+    <div class="pane-header">classes (one per line)</div>
+    <textarea id="input" spellcheck="false"></textarea>
+  </div>
+
+  <div class="divider" id="d1"></div>
+
+  <div class="pane">
+    <div class="pane-header">generated css</div>
+    <div id="output-wrap">
+      <pre><code id="output" class="language-css"></code></pre>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  const DEFAULT_CLASSES = [
+    'd-flex', 'flex-column', 'gap-8', 'p-16', 'br-4',
+    'bg-f5f5f5', 'c-red', 'w-200', 'h-100',
+    'flex-center-center', 'm-t-8',
+    'border-1', 'border-solid', 'border-ccc',
+    'fs-14', 'fw-bold', 'select-none', 'cursor-pointer',
+  ]
+  document.getElementById('input').value = DEFAULT_CLASSES.join('\n')
+
+  const params = new URLSearchParams(location.search)
+  const version = params.get('v') || '66.6.8'
+  document.getElementById('version').value = version
+
+  window.switchVersion = () => {
+    const v = document.getElementById('version').value.trim()
+    location.href = `${location.pathname}?v=${v}`
+  }
+  document.getElementById('version').addEventListener('keydown', e => {
+    if (e.key === 'Enter') switchVersion()
+  })
+
+  let uno = null
+  const status = document.getElementById('status')
+
+  try {
+    const { createGenerator } = await import(
+      `https://cdn.jsdelivr.net/npm/@unocss/core@${version}/dist/index.mjs`
+    )
+    const { presetScalpel } = await import('./dist/index.mjs?t=' + Date.now())
+    uno = await createGenerator({ presets: [presetScalpel()] })
+    status.className = 'ok'
+    status.textContent = `✓ @unocss/core@${version}`
+    generate()
+  } catch (e) {
+    status.className = 'err'
+    status.textContent = `✗ ${e.message}`
+    document.getElementById('output').textContent = e.message
+    hljs.highlightElement(document.getElementById('output'))
+  }
+
+  async function generate() {
+    if (!uno) return
+    const classes = document.getElementById('input').value
+      .split('\n').map(s => s.trim()).filter(Boolean).join(' ')
+    try {
+      const { css } = await uno.generate(classes, { preflights: false })
+      const formatted = css_beautify(css || '/* no output */', {
+        indent_size: 2,
+        newline_between_rules: false,
+        end_with_newline: false,
+        brace_style: 'collapse',
+      })
+      const el = document.getElementById('output')
+      // 按规则块切分（以 /* 注释 或 selector { 开头），每块 break-inside: avoid
+      const blocks = formatted.split(/(?=\/\*|(?:\n|^)[^\s/*])/).filter(s => s.trim())
+      el.innerHTML = blocks.map(block => {
+        const tmp = document.createElement('code')
+        tmp.className = 'language-css'
+        tmp.textContent = block.trim()
+        hljs.highlightElement(tmp)
+        return `<div class="rule-block">${tmp.innerHTML}\n</div>`
+      }).join('')
+    } catch (e) {
+      const el = document.getElementById('output')
+      el.textContent = e.message
+      hljs.highlightElement(el)
+    }
+  }
+
+  document.getElementById('input').addEventListener('input', generate)
+
+  const divider = document.getElementById('d1')
+  const prev = divider.previousElementSibling
+  let dragging = false, startX = 0, prevW = 0
+  divider.addEventListener('mousedown', e => {
+    dragging = true; startX = e.clientX; prevW = prev.offsetWidth
+    divider.classList.add('dragging'); e.preventDefault()
+  })
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return
+    prev.style.flex = `0 0 ${Math.max(120, prevW + e.clientX - startX)}px`
+  })
+  document.addEventListener('mouseup', () => { dragging = false; divider.classList.remove('dragging') })
+</script>
+</body>
+</html>
